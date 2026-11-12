@@ -26,7 +26,7 @@ html {
 
 body {
   background: var(--bg);
-  color: var(--text);
+  color: var(--);
   font-family: var(--font);
   line-height: 1.7;
   overflow-x: hidden;
@@ -34,7 +34,7 @@ body {
 
 a {
   color: inherit;
-  text-decoration: none;
+  -decoration: none;
 }
 
 .site-header {
@@ -459,7 +459,15 @@ footer > a:last-child:hover {
   .site-header {
     height: 70px;
   }
+ /* Center the Hero heading and introduction */
+.hero-copy {
+    text-align: center !important;
+}
 
+.hero-copy h1,
+.hero-copy p {
+    text-align: center !important;
+}
   .menu-toggle {
     display: block;
   }
