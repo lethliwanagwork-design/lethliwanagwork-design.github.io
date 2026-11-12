@@ -785,3 +785,18 @@ footer > a:last-child:hover {
     }
 
 }
+/* MOBILE HERO HEADING CENTER ALIGNMENT */
+@media screen and (max-width: 768px) {
+
+    .hero-copy h1 {
+        text-align: center !important;
+        width: 100% !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    .hero-copy h1 em {
+        display: inline;
+    }
+
+}
