@@ -785,18 +785,26 @@ footer > a:last-child:hover {
     }
 
 }
-/* MOBILE HERO HEADING CENTER ALIGNMENT */
+/* HERO HEADING ALIGNMENT */
+
+.hero-copy .hero-title {
+    text-align: left !important;
+}
+
 @media screen and (max-width: 768px) {
 
-    .hero-copy h1 {
-        text-align: center !important;
+    .hero-copy .hero-title {
+        display: block !important;
         width: 100% !important;
+        text-align: center !important;
         margin-left: auto !important;
         margin-right: auto !important;
+        line-height: 1.2 !important;
     }
 
-    .hero-copy h1 em {
-        display: inline;
+    .hero-copy .hero-title em {
+        display: inline !important;
+        text-align: center !important;
     }
 
 }
