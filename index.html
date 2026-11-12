@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,8 +16,84 @@
 
   <link rel="stylesheet" href="styles.css">
 
-  <!-- MOBILE RESPONSIVE PRESENTATION -->
+  <!-- CENTERED LAYOUT AND MOBILE RESPONSIVENESS -->
   <style>
+
+    /* CENTERED PORTFOLIO PRESENTATION */
+    /* These rules intentionally override the external stylesheet so all
+       website wording is centered on desktop and mobile. */
+    body,
+    header,
+    nav,
+    main,
+    section,
+    section *,
+    footer,
+    footer *,
+    .hero,
+    .hero *,
+    .ticker,
+    .ticker *,
+    .section,
+    .section *,
+    .section-content,
+    .section-content *,
+    .service-card,
+    .service-card *,
+    .project,
+    .project *,
+    .values,
+    .values *,
+    .quote-band,
+    .quote-band * {
+      text-align: center !important;
+    }
+
+    .hero,
+    .hero-copy,
+    .hero-portrait,
+    .section-content,
+    .service-card,
+    .project,
+    .project > div,
+    .contact,
+    footer {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .hero-actions,
+    .contact-actions,
+    .tags,
+    .values {
+      justify-content: center !important;
+      align-items: center !important;
+    }
+
+    .skills .service-card ul {
+      display: block !important;
+      list-style-position: inside !important;
+      text-align: center !important;
+      padding-left: 0 !important;
+      margin-left: auto !important;
+      margin-right: auto !important;
+    }
+
+    .skills .service-card ul li {
+      display: list-item !important;
+      list-style-position: inside !important;
+      text-align: center !important;
+    }
+
+    .section-label,
+    .small-note,
+    .disclaimer,
+    .project-type,
+    .project-number,
+    .project-arrow {
+      text-align: center !important;
+    }
+
     @media screen and (max-width: 768px) {
       body {
         text-align: center;
@@ -72,17 +147,17 @@
       }
 
       .skills .service-card ul {
-        display: inline-block !important;
-        list-style: disc outside !important;
-        text-align: left !important;
-        padding-left: 25px !important;
+        display: block !important;
+        list-style: disc inside !important;
+        text-align: center !important;
+        padding-left: 0 !important;
         margin: 15px auto 20px !important;
       }
 
       .skills .service-card ul li {
         display: list-item !important;
-        list-style: disc outside !important;
-        text-align: left !important;
+        list-style: disc inside !important;
+        text-align: center !important;
         background: none !important;
         border: none !important;
         box-shadow: none !important;
@@ -723,15 +798,15 @@
           <article class="service-card">
             <h3>Executive & Business Operations</h3>
 
-            <ul style="display:block; list-style:disc outside; text-align:left; padding-left:25px; margin:15px 0 20px;">
-              <li style="display:list-item; list-style:disc; background:none; border:0; padding:5px 0;">Executive Support</li>
-              <li style="display:list-item; list-style:disc; background:none; border:0; padding:5px 0;">Calendar Management</li>
-              <li style="display:list-item; list-style:disc; background:none; border:0; padding:5px 0;">Meeting Coordination</li>
-              <li style="display:list-item; list-style:disc; background:none; border:0; padding:5px 0;">Stakeholder Communications</li>
-              <li style="display:list-item; list-style:disc; background:none; border:0; padding:5px 0;">Project Coordination</li>
-              <li style="display:list-item; list-style:disc; background:none; border:0; padding:5px 0;">SOP Development</li>
-              <li style="display:list-item; list-style:disc; background:none; border:0; padding:5px 0;">Business Administration</li>
-              <li style="display:list-item; list-style:disc; background:none; border:0; padding:5px 0;">Process Improvement</li>
+            <ul style="display:block; list-style:disc inside; text-align:center; padding-left:0; margin:15px auto 20px;">
+              <li style="display:list-item; list-style:disc inside; background:none; border:0; padding:5px 0;">Executive Support</li>
+              <li style="display:list-item; list-style:disc inside; background:none; border:0; padding:5px 0;">Calendar Management</li>
+              <li style="display:list-item; list-style:disc inside; background:none; border:0; padding:5px 0;">Meeting Coordination</li>
+              <li style="display:list-item; list-style:disc inside; background:none; border:0; padding:5px 0;">Stakeholder Communications</li>
+              <li style="display:list-item; list-style:disc inside; background:none; border:0; padding:5px 0;">Project Coordination</li>
+              <li style="display:list-item; list-style:disc inside; background:none; border:0; padding:5px 0;">SOP Development</li>
+              <li style="display:list-item; list-style:disc inside; background:none; border:0; padding:5px 0;">Business Administration</li>
+              <li style="display:list-item; list-style:disc inside; background:none; border:0; padding:5px 0;">Process Improvement</li>
             </ul>
 
             <span>OPERATIONS & LEADERSHIP SUPPORT</span>
@@ -741,15 +816,15 @@
           <article class="service-card">
             <h3>Web Development & Design</h3>
 
-            <ul style="display:block; list-style:disc outside; text-align:left; padding-left:25px; margin:15px 0 20px;">
-              <li style="display:list-item; list-style:disc; background:none; border:0; padding:5px 0;">HTML</li>
-              <li style="display:list-item; list-style:disc; background:none; border:0; padding:5px 0;">CSS</li>
-              <li style="display:list-item; list-style:disc; background:none; border:0; padding:5px 0;">WordPress</li>
-              <li style="display:list-item; list-style:disc; background:none; border:0; padding:5px 0;">Wix</li>
-              <li style="display:list-item; list-style:disc; background:none; border:0; padding:5px 0;">Shopify</li>
-              <li style="display:list-item; list-style:disc; background:none; border:0; padding:5px 0;">GoDaddy</li>
-              <li style="display:list-item; list-style:disc; background:none; border:0; padding:5px 0;">Responsive Websites</li>
-              <li style="display:list-item; list-style:disc; background:none; border:0; padding:5px 0;">UX & Content Review</li>
+            <ul style="display:block; list-style:disc inside; text-align:center; padding-left:0; margin:15px auto 20px;">
+              <li style="display:list-item; list-style:disc inside; background:none; border:0; padding:5px 0;">HTML</li>
+              <li style="display:list-item; list-style:disc inside; background:none; border:0; padding:5px 0;">CSS</li>
+              <li style="display:list-item; list-style:disc inside; background:none; border:0; padding:5px 0;">WordPress</li>
+              <li style="display:list-item; list-style:disc inside; background:none; border:0; padding:5px 0;">Wix</li>
+              <li style="display:list-item; list-style:disc inside; background:none; border:0; padding:5px 0;">Shopify</li>
+              <li style="display:list-item; list-style:disc inside; background:none; border:0; padding:5px 0;">GoDaddy</li>
+              <li style="display:list-item; list-style:disc inside; background:none; border:0; padding:5px 0;">Responsive Websites</li>
+              <li style="display:list-item; list-style:disc inside; background:none; border:0; padding:5px 0;">UX & Content Review</li>
             </ul>
 
             <span>WEB TECHNOLOGY</span>
@@ -759,13 +834,13 @@
           <article class="service-card">
             <h3>AI & Digital Productivity</h3>
 
-            <ul style="display:block; list-style:disc outside; text-align:left; padding-left:25px; margin:15px 0 20px;">
-              <li style="display:list-item; list-style:disc; background:none; border:0; padding:5px 0;">AI-Assisted Research</li>
-              <li style="display:list-item; list-style:disc; background:none; border:0; padding:5px 0;">AI Content Development</li>
-              <li style="display:list-item; list-style:disc; background:none; border:0; padding:5px 0;">Documentation</li>
-              <li style="display:list-item; list-style:disc; background:none; border:0; padding:5px 0;">Workflow Support</li>
-              <li style="display:list-item; list-style:disc; background:none; border:0; padding:5px 0;">Process Optimization</li>
-              <li style="display:list-item; list-style:disc; background:none; border:0; padding:5px 0;">Digital Solutions</li>
+            <ul style="display:block; list-style:disc inside; text-align:center; padding-left:0; margin:15px auto 20px;">
+              <li style="display:list-item; list-style:disc inside; background:none; border:0; padding:5px 0;">AI-Assisted Research</li>
+              <li style="display:list-item; list-style:disc inside; background:none; border:0; padding:5px 0;">AI Content Development</li>
+              <li style="display:list-item; list-style:disc inside; background:none; border:0; padding:5px 0;">Documentation</li>
+              <li style="display:list-item; list-style:disc inside; background:none; border:0; padding:5px 0;">Workflow Support</li>
+              <li style="display:list-item; list-style:disc inside; background:none; border:0; padding:5px 0;">Process Optimization</li>
+              <li style="display:list-item; list-style:disc inside; background:none; border:0; padding:5px 0;">Digital Solutions</li>
             </ul>
 
             <span>AI-ENABLED WORKFLOWS</span>
@@ -775,14 +850,14 @@
           <article class="service-card">
             <h3>Digital Marketing & Communications</h3>
 
-            <ul style="display:block; list-style:disc outside; text-align:left; padding-left:25px; margin:15px 0 20px;">
-              <li style="display:list-item; list-style:disc; background:none; border:0; padding:5px 0;">Social Media Management</li>
-              <li style="display:list-item; list-style:disc; background:none; border:0; padding:5px 0;">Email Marketing</li>
-              <li style="display:list-item; list-style:disc; background:none; border:0; padding:5px 0;">Newsletters</li>
-              <li style="display:list-item; list-style:disc; background:none; border:0; padding:5px 0;">SEO</li>
-              <li style="display:list-item; list-style:disc; background:none; border:0; padding:5px 0;">Content Strategy</li>
-              <li style="display:list-item; list-style:disc; background:none; border:0; padding:5px 0;">Audience Engagement</li>
-              <li style="display:list-item; list-style:disc; background:none; border:0; padding:5px 0;">Campaign Analytics</li>
+            <ul style="display:block; list-style:disc inside; text-align:center; padding-left:0; margin:15px auto 20px;">
+              <li style="display:list-item; list-style:disc inside; background:none; border:0; padding:5px 0;">Social Media Management</li>
+              <li style="display:list-item; list-style:disc inside; background:none; border:0; padding:5px 0;">Email Marketing</li>
+              <li style="display:list-item; list-style:disc inside; background:none; border:0; padding:5px 0;">Newsletters</li>
+              <li style="display:list-item; list-style:disc inside; background:none; border:0; padding:5px 0;">SEO</li>
+              <li style="display:list-item; list-style:disc inside; background:none; border:0; padding:5px 0;">Content Strategy</li>
+              <li style="display:list-item; list-style:disc inside; background:none; border:0; padding:5px 0;">Audience Engagement</li>
+              <li style="display:list-item; list-style:disc inside; background:none; border:0; padding:5px 0;">Campaign Analytics</li>
             </ul>
 
             <span>MARKETING & COMMUNICATIONS</span>
@@ -792,14 +867,14 @@
           <article class="service-card">
             <h3>Creative Production</h3>
 
-            <ul style="display:block; list-style:disc outside; text-align:left; padding-left:25px; margin:15px 0 20px;">
-              <li style="display:list-item; list-style:disc; background:none; border:0; padding:5px 0;">Canva</li>
-              <li style="display:list-item; list-style:disc; background:none; border:0; padding:5px 0;">GIMP</li>
-              <li style="display:list-item; list-style:disc; background:none; border:0; padding:5px 0;">iMovie</li>
-              <li style="display:list-item; list-style:disc; background:none; border:0; padding:5px 0;">Graphic Design</li>
-              <li style="display:list-item; list-style:disc; background:none; border:0; padding:5px 0;">Video Editing</li>
-              <li style="display:list-item; list-style:disc; background:none; border:0; padding:5px 0;">Digital Content</li>
-              <li style="display:list-item; list-style:disc; background:none; border:0; padding:5px 0;">Marketing Materials</li>
+            <ul style="display:block; list-style:disc inside; text-align:center; padding-left:0; margin:15px auto 20px;">
+              <li style="display:list-item; list-style:disc inside; background:none; border:0; padding:5px 0;">Canva</li>
+              <li style="display:list-item; list-style:disc inside; background:none; border:0; padding:5px 0;">GIMP</li>
+              <li style="display:list-item; list-style:disc inside; background:none; border:0; padding:5px 0;">iMovie</li>
+              <li style="display:list-item; list-style:disc inside; background:none; border:0; padding:5px 0;">Graphic Design</li>
+              <li style="display:list-item; list-style:disc inside; background:none; border:0; padding:5px 0;">Video Editing</li>
+              <li style="display:list-item; list-style:disc inside; background:none; border:0; padding:5px 0;">Digital Content</li>
+              <li style="display:list-item; list-style:disc inside; background:none; border:0; padding:5px 0;">Marketing Materials</li>
             </ul>
 
             <span>CREATIVE & VISUAL COMMUNICATION</span>
@@ -809,12 +884,12 @@
           <article class="service-card">
             <h3>Business & Productivity Platforms</h3>
 
-            <ul style="display:block; list-style:disc outside; text-align:left; padding-left:25px; margin:15px 0 20px;">
-              <li style="display:list-item; list-style:disc; background:none; border:0; padding:5px 0;">Google Workspace</li>
-              <li style="display:list-item; list-style:disc; background:none; border:0; padding:5px 0;">Google Calendar</li>
-              <li style="display:list-item; list-style:disc; background:none; border:0; padding:5px 0;">Microsoft Outlook</li>
-              <li style="display:list-item; list-style:disc; background:none; border:0; padding:5px 0;">Asana</li>
-              <li style="display:list-item; list-style:disc; background:none; border:0; padding:5px 0;">HubSpot</li>
+            <ul style="display:block; list-style:disc inside; text-align:center; padding-left:0; margin:15px auto 20px;">
+              <li style="display:list-item; list-style:disc inside; background:none; border:0; padding:5px 0;">Google Workspace</li>
+              <li style="display:list-item; list-style:disc inside; background:none; border:0; padding:5px 0;">Google Calendar</li>
+              <li style="display:list-item; list-style:disc inside; background:none; border:0; padding:5px 0;">Microsoft Outlook</li>
+              <li style="display:list-item; list-style:disc inside; background:none; border:0; padding:5px 0;">Asana</li>
+              <li style="display:list-item; list-style:disc inside; background:none; border:0; padding:5px 0;">HubSpot</li>
             </ul>
 
             <span>BUSINESS TOOLS</span>
@@ -824,14 +899,14 @@
           <article class="service-card">
             <h3>Grant & Nonprofit Development</h3>
 
-            <ul style="display:block; list-style:disc outside; text-align:left; padding-left:25px; margin:15px 0 20px;">
-              <li style="display:list-item; list-style:disc; background:none; border:0; padding:5px 0;">Grant Research</li>
-              <li style="display:list-item; list-style:disc; background:none; border:0; padding:5px 0;">Funding Assessment</li>
-              <li style="display:list-item; list-style:disc; background:none; border:0; padding:5px 0;">Grant Narratives</li>
-              <li style="display:list-item; list-style:disc; background:none; border:0; padding:5px 0;">Proposal Writing</li>
-              <li style="display:list-item; list-style:disc; background:none; border:0; padding:5px 0;">Online Applications</li>
-              <li style="display:list-item; list-style:disc; background:none; border:0; padding:5px 0;">Submission Coordination</li>
-              <li style="display:list-item; list-style:disc; background:none; border:0; padding:5px 0;">Nonprofit Communications</li>
+            <ul style="display:block; list-style:disc inside; text-align:center; padding-left:0; margin:15px auto 20px;">
+              <li style="display:list-item; list-style:disc inside; background:none; border:0; padding:5px 0;">Grant Research</li>
+              <li style="display:list-item; list-style:disc inside; background:none; border:0; padding:5px 0;">Funding Assessment</li>
+              <li style="display:list-item; list-style:disc inside; background:none; border:0; padding:5px 0;">Grant Narratives</li>
+              <li style="display:list-item; list-style:disc inside; background:none; border:0; padding:5px 0;">Proposal Writing</li>
+              <li style="display:list-item; list-style:disc inside; background:none; border:0; padding:5px 0;">Online Applications</li>
+              <li style="display:list-item; list-style:disc inside; background:none; border:0; padding:5px 0;">Submission Coordination</li>
+              <li style="display:list-item; list-style:disc inside; background:none; border:0; padding:5px 0;">Nonprofit Communications</li>
             </ul>
 
             <span>GRANT DEVELOPMENT</span>
