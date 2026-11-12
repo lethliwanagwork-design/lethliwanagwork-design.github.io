@@ -1,67 +1,791 @@
+
 <!DOCTYPE html>
-<html><head><base target="_top"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<style>
-:root{--navy:#142f4b;--navy2:#1d4263;--teal:#167d78;--tealLight:#e8f4f2;--bg:#f4f7fa;--ink:#1c2935;--muted:#71808d;--line:#e2e8ee;--white:#fff;--gold:#c99b43;--red:#b64b4b;--shadow:0 8px 28px rgba(20,47,75,.07)}
-*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;font-size:14px}.top{height:72px;background:var(--navy);color:#fff;display:flex;align-items:center;justify-content:space-between;padding:0 28px;position:sticky;top:0;z-index:10;box-shadow:0 3px 14px #102b3f22}.brand{display:flex;align-items:center;gap:13px}.logo{width:42px;height:42px;border-radius:12px;background:linear-gradient(145deg,#269b91,#12665f);display:grid;place-items:center;font-weight:800;letter-spacing:.5px}.brand h1{font-size:16px;margin:0;font-weight:700;letter-spacing:.2px}.brand small{display:block;color:#c1d0dc;font-size:11px;margin-top:4px}.user{font-size:12px;color:#d7e3eb;text-align:right}.layout{display:grid;grid-template-columns:248px minmax(0,1fr);min-height:calc(100vh - 72px)}aside{background:#fff;border-right:1px solid var(--line);padding:22px 14px}.navlabel{font-size:10px;letter-spacing:1.4px;color:#99a5af;font-weight:800;padding:17px 12px 8px}.nav{display:flex;align-items:center;gap:11px;width:100%;border:0;background:transparent;text-align:left;padding:11px 13px;border-radius:9px;color:#53616d;cursor:pointer;font-size:13px;margin:2px 0;transition:.15s}.nav:hover,.nav.active{background:var(--tealLight);color:#12675f;font-weight:700}.nav .ico{width:20px;text-align:center;font-size:16px}main{padding:30px;min-width:0;max-width:1800px;width:100%;margin:0 auto}.heading{display:flex;align-items:flex-start;justify-content:space-between;gap:15px;flex-wrap:wrap;margin-bottom:22px}.heading h2{margin:0;font-size:25px;letter-spacing:-.5px;color:var(--navy)}.sub{color:var(--muted);font-size:13px;margin-top:6px}.actions{display:flex;gap:8px;flex-wrap:wrap}.btn{border:1px solid var(--line);background:#fff;border-radius:8px;padding:10px 14px;cursor:pointer;font-weight:650;color:#425360;font-size:12px}.btn:hover{border-color:#9fbab8}.btn.primary{background:var(--teal);border-color:var(--teal);color:#fff}.btn.primary:hover{background:#116b66}.btn.soft{background:var(--tealLight);color:#12675f;border-color:#d3e9e5}.cards{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin:20px 0}.card,.panel{background:#fff;border:1px solid var(--line);border-radius:13px;box-shadow:var(--shadow)}.card{padding:17px 18px;position:relative;overflow:hidden}.card:after{content:"";position:absolute;width:70px;height:70px;border-radius:50%;background:#eaf4f2;right:-24px;top:-25px}.card span{display:block;color:var(--muted);font-size:11px;font-weight:650;position:relative;z-index:1}.card strong{display:block;font-size:28px;margin-top:9px;color:var(--navy);letter-spacing:-.8px;position:relative;z-index:1}.card small{display:block;color:#8b98a2;font-size:10px;margin-top:5px}.grid2{display:grid;grid-template-columns:1.15fr .85fr;gap:16px;margin-top:17px}.panel{overflow:hidden;margin-top:16px}.panelhead{padding:17px 19px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:12px}.panelhead strong{font-size:13px;color:var(--navy)}.panelbody{padding:18px 19px}.muted{color:var(--muted);font-size:12px}.barrow{display:grid;grid-template-columns:110px 1fr 28px;gap:10px;align-items:center;margin:14px 0;font-size:11px;color:#596875}.bar{height:9px;background:#edf2f4;border-radius:20px;overflow:hidden}.bar i{display:block;height:100%;background:linear-gradient(90deg,#167d78,#54aaa0);border-radius:20px;min-width:0}.legend{display:flex;gap:15px;flex-wrap:wrap;color:var(--muted);font-size:11px}.dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--teal);margin-right:5px}.tablewrap{overflow:auto;max-height:calc(100vh - 300px)}table{border-collapse:collapse;width:100%;font-size:12px;white-space:nowrap}th,td{padding:12px 13px;border-bottom:1px solid #edf1f3;text-align:left;max-width:280px;overflow:hidden;text-overflow:ellipsis}th{background:#f8fafb;color:#64727e;position:sticky;top:0;z-index:1;font-size:10px;text-transform:uppercase;letter-spacing:.5px}tr:hover td{background:#fbfdfd}.toolbar{padding:13px 16px;display:flex;justify-content:space-between;gap:10px;align-items:center;border-bottom:1px solid var(--line);flex-wrap:wrap}.search{border:1px solid var(--line);border-radius:8px;padding:10px 12px;min-width:240px;font-size:12px;outline:none}.search:focus,.field input:focus,.field textarea:focus,.field select:focus{border-color:#6aa8a2;box-shadow:0 0 0 3px #167d7815}.empty{text-align:center;color:var(--muted);padding:35px}.status{font-size:11px;color:var(--muted)}.pill{display:inline-block;padding:5px 8px;border-radius:20px;background:#eef3f5;color:#5a6a75;font-size:10px;font-weight:700}.pill.good{background:#e8f4ef;color:#26765a}.pill.warn{background:#fff4df;color:#946b20}.modalback{display:none;position:fixed;inset:0;background:#102b3f99;z-index:30;align-items:center;justify-content:center;padding:18px}.modal{background:#fff;border-radius:15px;width:min(900px,100%);max-height:92vh;overflow:auto;padding:22px;box-shadow:0 20px 60px #102b3f40}.modalhead{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px}.modalhead h3{margin:0;color:var(--navy);font-size:18px}.fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}.field label{display:block;font-size:10px;color:#5b6a76;margin-bottom:6px;font-weight:800;text-transform:uppercase;letter-spacing:.35px}.field input,.field textarea,.field select{width:100%;border:1px solid var(--line);border-radius:8px;padding:10px;font:13px inherit;color:var(--ink);background:#fff}.field textarea{min-height:78px;resize:vertical}.field.full{grid-column:1/-1}.modalfoot{display:flex;justify-content:flex-end;gap:8px;margin-top:20px}.callintro{background:#edf6f4;border:1px solid #d8ebe7;border-radius:10px;padding:14px;margin-bottom:14px;color:#315b58;line-height:1.6;font-size:12px}.scriptbox{background:#f8fafb;border:1px solid var(--line);border-radius:9px;padding:13px;margin:10px 0}.scriptbox b{color:var(--navy);font-size:12px}.scriptbox p{font-size:12px;line-height:1.6;color:#52616c;margin:7px 0 0}.quicklinks{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.quick{border:1px solid var(--line);border-radius:10px;padding:15px;background:#fff;cursor:pointer;text-align:left}.quick:hover{border-color:#9fc7c2;background:#fbfefd}.quick b{display:block;color:var(--navy);font-size:12px;margin:7px 0 4px}.quick span{font-size:11px;color:var(--muted)}.loading{padding:35px;text-align:center;color:var(--muted)}.scriptgrid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.scriptcard{background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px;box-shadow:var(--shadow)}.scriptcard h3{margin:0 0 8px;color:var(--navy);font-size:14px}.scriptcard .meta{font-size:10px;color:var(--teal);font-weight:800;text-transform:uppercase;letter-spacing:.5px}.scriptcard p{white-space:pre-wrap;line-height:1.6;color:#52616c;font-size:12px;margin:8px 0}.scriptcard .scriptlabel{font-size:10px;font-weight:800;color:#667788;text-transform:uppercase;margin-top:10px}.scriptsearch{width:100%;max-width:420px;border:1px solid var(--line);border-radius:8px;padding:10px 12px;font-size:12px}.kpisub{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0 16px}.kpisub .pill{background:#edf5f5;color:#236c67}
-@media(max-width:1050px){.cards{grid-template-columns:repeat(2,1fr)}.grid2{grid-template-columns:1fr}}@media(max-width:760px){.layout{grid-template-columns:1fr}aside{display:flex;overflow:auto;padding:8px;border-right:0;border-bottom:1px solid var(--line)}.navlabel{display:none}.nav{white-space:nowrap;width:auto;flex:0 0 auto}.nav .ico{display:none}main{padding:17px}.user{display:none}.top{padding:0 15px}.brand h1{font-size:14px}.quicklinks{grid-template-columns:1fr 1fr}}@media(max-width:520px){.fields{grid-template-columns:1fr}.field.full{grid-column:auto}.cards{gap:9px}.card{padding:13px}.card strong{font-size:23px}.heading h2{font-size:21px}.quicklinks{grid-template-columns:1fr}.search{min-width:100%}}
-</style></head><body>
-<header class="top"><div class="brand"><div class="logo">RCI</div><div><h1>Business Development Portal</h1><small>PROSPECTING · CLIENT RELATIONSHIPS · PARTNERSHIPS</small></div></div><div class="user" id="userLabel">Connecting to RCI workspace…</div></header>
-<div class="layout"><aside>
-<button class="nav active" data-view="dashboard" onclick="showDashboard(this)"><span class="ico">▦</span>Dashboard</button>
-<div class="navlabel">BUSINESS DEVELOPMENT</div><button class="nav" onclick="openCalls(this)"><span class="ico">☎</span>Call Management</button><button class="nav" onclick="openScripts(this)"><span class="ico">▤</span>Call Scripts & FAQs</button><button class="nav" onclick="openSheet('FOLLOW-UP TRACKER',this)"><span class="ico">◷</span>Follow-up Tracker</button><button class="nav" onclick="openSheet('TEAM PERFORMANCE',this)"><span class="ico">▥</span>Team Performance</button><button class="nav" onclick="openSheet('PROSPECTS',this)"><span class="ico">◫</span>Prospects</button><button class="nav" onclick="openSheet('EMAILS SENT',this)"><span class="ico">✉</span>Email Outreach</button><button class="nav" onclick="openSheet('PARTNERSHIP',this)"><span class="ico">♧</span>Partnerships</button><button class="nav" onclick="openSheet('ROOFERS',this)"><span class="ico">⌂</span>Roofing Partners</button><button class="nav" onclick="openSheet('LENDERS',this)"><span class="ico">▣</span>Lenders</button>
-<div class="navlabel">MICHIGAN NETWORK</div><button class="nav" onclick="openSheet('Organization Research',this)"><span class="ico">◎</span>Organization Research</button><button class="nav" onclick="openSheet('30-Day Action Plan',this)"><span class="ico">▦</span>30-Day Action Plan</button><button class="nav" onclick="openSheet('Outreach & Follow-up',this)"><span class="ico">↗</span>Membership Follow-ups</button><button class="nav" onclick="openSheet('Contact Directory',this)"><span class="ico">♙</span>Contact Directory</button><button class="nav" onclick="openSheet('Fees Eligibility & Signup',this)"><span class="ico">＄</span>Fees & Eligibility</button>
-</aside><main>
-<section id="dashboardView"><div class="heading"><div><h2>Business Development Overview</h2><div class="sub">A shared view of prospect activity, call outcomes, follow-up commitments and team execution.</div></div><div class="actions"><button class="btn" onclick="refreshDashboard()">↻ Refresh data</button><button class="btn primary" onclick="openCalls()">＋ Log a Call</button></div></div>
-<div class="cards" id="dashCards"><div class="card"><span>Total prospects</span><strong>—</strong><small>Loading records</small></div><div class="card"><span>Calls logged</span><strong>—</strong><small>All recorded calls</small></div><div class="card"><span>Meetings recorded</span><strong>—</strong><small>From call activity</small></div><div class="card"><span>Follow-ups due</span><strong>—</strong><small>Needs attention</small></div></div>
-<div class="grid2"><div class="panel"><div class="panelhead"><strong>Outreach performance</strong><span class="pill">Call activity</span></div><div class="panelbody" id="activityChart"><div class="loading">Loading performance data…</div></div></div><div class="panel"><div class="panelhead"><strong>Call outcomes</strong><span class="pill">Recorded results</span></div><div class="panelbody" id="outcomeChart"><div class="loading">Loading outcomes…</div></div></div></div>
-<div class="kpisub"><span class="pill">Calls today: <b id="callsToday">—</b></span><span class="pill">Connected: <b id="connectedCalls">—</b></span><span class="pill">Qualified prospects: <b id="qualifiedProspects">—</b></span><span class="pill">Open follow-ups: <b id="openTasks">—</b></span></div><div class="panel"><div class="panelhead"><strong>Recent call activity</strong><button class="btn soft" onclick="openCalls()">View call log →</button></div><div class="tablewrap"><table><thead><tr><th>Company</th><th>Contact</th><th>Date</th><th>Called by</th><th>Outcome</th><th>Next step</th></tr></thead><tbody id="recentCalls"><tr><td colspan="6" class="loading">Loading recent activity…</td></tr></tbody></table></div></div>
-<div class="panel"><div class="panelhead"><strong>Quick access</strong><span class="status">Frequently used modules</span></div><div class="panelbody"><div class="quicklinks"><button class="quick" onclick="openSheet('PROSPECTS')">◫<b>Prospect database</b><span>Find companies and decision-makers</span></button><button class="quick" onclick="openCalls()">☎<b>Record a conversation</b><span>Log call details and next steps</span></button><button class="quick" onclick="openScripts()">▤<b>Call script library</b><span>Prepare for prospect questions</span></button><button class="quick" onclick="openSheet('FOLLOW-UP TRACKER')">◷<b>Follow-up tracker</b><span>Owners, due dates and next actions</span></button></div></div></div>
-</section>
-<section id="tableView" style="display:none"><div class="heading"><div><h2 id="sheetTitle">Records</h2><div class="sub" id="sheetSub">Shared RCI records</div></div><div class="actions"><button class="btn" onclick="loadCurrent()">↻ Refresh</button><button class="btn primary" onclick="openNew()">＋ Add Record</button></div></div><div class="panel"><div class="toolbar"><input class="search" id="searchBox" placeholder="Search records…" oninput="filterRows()"><span class="status" id="recordCount"></span></div><div class="tablewrap"><table><thead id="thead"></thead><tbody id="tbody"><tr><td class="loading">Loading…</td></tr></tbody></table></div></div><div class="status" id="sheetStatus"></div></section>
-<section id="scriptsView" style="display:none"><div class="heading"><div><h2>Call Scripts & Prospect FAQs</h2><div class="sub">Use the approved RCI guide, capture the prospect’s actual response, and agree on a clear next action.</div></div><input class="scriptsearch" id="scriptSearch" placeholder="Search scripts, questions or answers…" oninput="filterScripts()"></div><div class="callintro"><b>Purpose of the first call:</b> Identify the right contact, understand whether there is a potential fit, answer initial questions accurately, and agree on a clear next step. Do not promise savings, pricing, project timelines, or technical feasibility without review by the RCI team.</div><div id="scriptContent"></div></section>
-</main></div>
-<div class="modalback" id="modalBack"><div class="modal"><div class="modalhead"><h3 id="modalTitle">Add record</h3><button class="btn" onclick="closeModal()">✕ Close</button></div><div id="callHelp"></div><div class="fields" id="formFields"></div><div class="modalfoot"><button class="btn" onclick="closeModal()">Cancel</button><button class="btn primary" onclick="saveForm()">Save Record</button></div></div></div>
-<script>
-let appData=null,currentSheet='',currentRows=[],currentHeaders=[],editingRow=null,formMode='sheet',dashboard=null,scriptRows=[];
-const groups={prospects:['PROSPECTS','LENDERS','EMAILS SENT','PARTNERSHIP','ROOFERS'],memberships:['Organization Research','30-Day Action Plan','Outreach & Follow-up','Contact Directory','Fees Eligibility & Signup']};
-const CALL_FIELDS=['Call ID','Company / Prospect','Contact Person','Contact Title','Phone Number','Date of Call','Time of Call (ET)','Called By','Call Type','Call Outcome','Decision-Maker Reached','Interest Level','Prospect Questions / Objections','Response Provided','Call Summary / Notes','Next Step','Assigned To','Follow-up Date','Meeting Date','Call Status','Source / Prospect Type','Created At'];
-function callServer(fn,...args){return new Promise((resolve,reject)=>google.script.run.withSuccessHandler(resolve).withFailureHandler(e=>reject(new Error(e.message||e)))[fn](...args));}
-async function loadInitial(){try{appData=await callServer('getInitialData');document.getElementById('userLabel').textContent=appData.userEmail+' · '+appData.role;await refreshDashboard();}catch(e){alert('Unable to connect to RCI workspace: '+e.message);}}
-async function refreshDashboard(){try{dashboard=await callServer('getDashboardData');renderDashboard();}catch(e){console.error(e);}}
-function renderDashboard(){if(!dashboard)return;const c=dashboard.counts||{};const cards=[['Total prospects',c.PROSPECTS||0,'Companies in prospect database'],['Calls logged',dashboard.totalCalls||0,(dashboard.callsMonth||0)+' calls this month'],['Meetings recorded',dashboard.meetings||0,'Meeting dates entered in call log'],['Follow-ups due',dashboard.followups||0,'Due today or overdue'],['Connected calls',dashboard.connected||0,'Calls marked connected'],['Qualified prospects',dashboard.qualifiedProspects||0,'Interested / qualified / meeting stage']];document.getElementById('dashCards').innerHTML=cards.map(x=>`<div class="card"><span>${esc(x[0])}</span><strong>${Number(x[1]).toLocaleString()}</strong><small>${esc(x[2])}</small></div>`).join('');
-document.getElementById('callsToday').textContent=dashboard.callsToday||0;document.getElementById('connectedCalls').textContent=dashboard.connected||0;document.getElementById('qualifiedProspects').textContent=dashboard.qualifiedProspects||0;document.getElementById('openTasks').textContent=dashboard.followups||0;const people=Object.entries(dashboard.byCaller||{}).sort((a,b)=>b[1]-a[1]);const max=Math.max(1,...people.map(x=>x[1]));document.getElementById('activityChart').innerHTML=`<div class="muted">Calls recorded by team member · ${dashboard.totalCalls||0} total</div>`+(people.length?people.map(([n,v])=>`<div class="barrow"><span title="${attr(n)}">${esc(n)}</span><div class="bar"><i style="width:${Math.round(v/max*100)}%"></i></div><b>${v}</b></div>`).join(''):'<div class="empty">No call activity has been recorded yet.</div>');
-const outs=Object.entries(dashboard.outcomes||{}).sort((a,b)=>b[1]-a[1]);const om=Math.max(1,...outs.map(x=>x[1]));document.getElementById('outcomeChart').innerHTML=`<div class="muted">Distribution of recorded call outcomes</div>`+(outs.length?outs.map(([n,v])=>`<div class="barrow"><span title="${attr(n)}">${esc(n)}</span><div class="bar"><i style="width:${Math.round(v/om*100)}%"></i></div><b>${v}</b></div>`).join(''):'<div class="empty">No outcomes recorded yet.</div>');
-const recent=dashboard.recent||[];document.getElementById('recentCalls').innerHTML=recent.length?recent.map(r=>`<tr><td>${esc(r.company||'—')}</td><td>${esc(r.contact||'—')}</td><td>${esc(r.date||'—')}</td><td>${esc(r.caller||'—')}</td><td><span class="pill">${esc(r.outcome||'Not recorded')}</span></td><td>${esc(r.next||'—')}</td></tr>`).join(''):'<tr><td colspan="6" class="empty">No calls logged yet. Select “Log a Call” to record the first conversation.</td></tr>';}
-function clearActive(){document.querySelectorAll('.nav').forEach(b=>b.classList.remove('active'));}
-function showDashboard(btn){document.getElementById('dashboardView').style.display='block';document.getElementById('tableView').style.display='none';document.getElementById('scriptsView').style.display='none';clearActive();if(btn)btn.classList.add('active');refreshDashboard();}
-async function openSheet(name,btn){currentSheet=name;document.getElementById('dashboardView').style.display='none';document.getElementById('scriptsView').style.display='none';document.getElementById('tableView').style.display='block';document.getElementById('sheetTitle').textContent=name;document.getElementById('sheetSub').textContent='Shared RCI worksheet · Updates are saved to the central Google Sheets database.';clearActive();if(btn)btn.classList.add('active');document.getElementById('searchBox').value='';await loadCurrent();}
-async function openCalls(btn){await openSheet('CALL LOG',btn);}
-async function loadCurrent(){if(!currentSheet)return;document.getElementById('tbody').innerHTML='<tr><td class="loading">Loading records…</td></tr>';try{const d=await callServer('getSheetData',currentSheet,'');currentHeaders=d.headers;currentRows=d.rows;renderTable(currentRows);document.getElementById('sheetStatus').textContent='Records are synchronized with the RCI shared Google Sheets database.';}catch(e){document.getElementById('tbody').innerHTML=`<tr><td class="empty">${esc(e.message)}</td></tr>`;}}
-function renderTable(rows){document.getElementById('thead').innerHTML='<tr>'+currentHeaders.map(h=>'<th>'+esc(h)+'</th>').join('')+'<th>Action</th></tr>';document.getElementById('recordCount').textContent=rows.length+' record(s)';if(!rows.length){document.getElementById('tbody').innerHTML=`<tr><td class="empty" colspan="${currentHeaders.length+1}">No records found.</td></tr>`;return;}document.getElementById('tbody').innerHTML=rows.map(r=>'<tr>'+currentHeaders.map(h=>`<td title="${attr(r[h]??'')}">${esc(r[h]??'')}</td>`).join('')+`<td><button class="btn" onclick="editRecord(${r._row})">Edit</button></td></tr>`).join('');}
-function filterRows(){const q=document.getElementById('searchBox').value.toLowerCase();renderTable(currentRows.filter(r=>JSON.stringify(r).toLowerCase().includes(q)));}
-function openNew(){editingRow=null;formMode='sheet';document.getElementById('modalTitle').textContent='Add '+currentSheet+' record';document.getElementById('callHelp').innerHTML='';buildForm({});document.getElementById('modalBack').style.display='flex';}
-function editRecord(row){const rec=currentRows.find(r=>r._row===row);if(!rec)return;editingRow=row;formMode='sheet';document.getElementById('modalTitle').textContent='Update '+currentSheet+' record';document.getElementById('callHelp').innerHTML='';buildForm(rec);document.getElementById('modalBack').style.display='flex';}
-function buildForm(rec){document.getElementById('formFields').innerHTML=currentHeaders.map(h=>fieldHtml(h,rec[h]??'')).join('');}
-function fieldHtml(h,v){const long=/notes|description|opportunity|guidance|purpose|eligibility|question|response|summary|next step|objection/i.test(h);let type='text';if(/date/i.test(h))type='date';if(/time/i.test(h))type='time';let options=null;if(/Call Outcome/.test(h))options=['Connected','Gatekeeper reached','Voicemail left','No answer','Wrong number','Call back requested'];if(/Interest Level/.test(h))options=['High','Medium','Low','None','Not determined'];if(/Decision-Maker Reached/.test(h))options=['Yes','No','Not sure'];if(/Call Type/.test(h))options=['Cold call','Follow-up call','Referral call','Partnership call','Roofing partner call','Lender inquiry','Membership inquiry','Other'];if(/Call Status|Status/.test(h))options=['Open','Follow-up required','Meeting scheduled','Not started','In progress','Waiting on prospect','Scheduled','Completed','Closed','Cancelled','Not interested'];if(/Called By|Assigned To|Owner/.test(h))options=['Leth','Ali','Drushti','Other'];if(/Outreach Status/.test(h))options=['Not contacted','Attempted','Connected','Information sent','Interested','Meeting scheduled','Qualified','Nurture','Not interested','Closed'];if(/Priority/.test(h))options=['High','Medium','Low'];const label=`<label>${esc(h)}</label>`;if(options)return `<div class="field"><label>${esc(h)}</label><select data-field="${attr(h)}"><option value="">Select…</option>${options.map(o=>`<option ${String(v)===o?'selected':''}>${esc(o)}</option>`).join('')}</select></div>`;if(long)return `<div class="field full">${label}<textarea data-field="${attr(h)}">${esc(v)}</textarea></div>`;return `<div class="field">${label}<input type="${type}" data-field="${attr(h)}" value="${attr(v)}" ${h==='Call ID'||h==='Created At'?'readonly':''}></div>`;}
-function openCallForm(){currentSheet='CALL LOG';formMode='call';editingRow=null;currentHeaders=CALL_FIELDS;document.getElementById('modalTitle').textContent='Log a prospect call';document.getElementById('callHelp').innerHTML='<div class="callintro"><b>Call logging reminder:</b> Record what was actually discussed, who you spoke with, the prospect’s questions, and the agreed next action. Avoid entering assumptions as confirmed facts.</div>';const today=new Date().toLocaleDateString('en-CA');const rec={'Call ID':'RCI-'+Date.now(),'Date of Call':today,'Called By':'Leth','Call Type':'Cold call','Call Outcome':'','Decision-Maker Reached':'Not sure','Interest Level':'Not determined','Call Status':'Open','Created At':new Date().toISOString()};document.getElementById('formFields').innerHTML=CALL_FIELDS.map(h=>fieldHtml(h,rec[h]??'')).join('');document.getElementById('modalBack').style.display='flex';}
-function openCallsFromDashboard(){openCallForm();}
-function openScripts(btn){document.getElementById('dashboardView').style.display='none';document.getElementById('tableView').style.display='none';document.getElementById('scriptsView').style.display='block';clearActive();if(btn)btn.classList.add('active');renderScripts();}
-async function renderScripts(){
- const host=document.getElementById('scriptContent');host.innerHTML='<div class="loading">Loading RCI call scripts…</div>';
- try{const d=await callServer('getSheetData','CALL SCRIPTS & FAQs','');scriptRows=d.rows||[];paintScripts(scriptRows);}
- catch(e){host.innerHTML='<div class="callintro">Unable to load the CALL SCRIPTS & FAQs worksheet: '+esc(e.message)+'</div>';}
-}
-function paintScripts(rows){
- const host=document.getElementById('scriptContent');
- if(!rows.length){host.innerHTML='<div class="empty">No scripts found. Add script records to the CALL SCRIPTS & FAQs worksheet.</div>';return;}
- host.innerHTML='<div class="scriptgrid">'+rows.map(r=>`<article class="scriptcard"><div class="meta">${esc(r['Audience / Call Type']||'General')} · ${esc(r['Call Stage']||'')}</div><h3>${esc(r['Prospect Question / Situation']||'Call guidance')}</h3><div class="scriptlabel">Suggested script / answer</div><p>${esc(r['Suggested Script / Answer']||'')}</p><div class="scriptlabel">Follow-up / discovery prompt</div><p>${esc(r['Follow-up / Discovery Prompt']||'')}</p><div class="scriptlabel">Purpose</div><p>${esc(r['Purpose / Desired Outcome']||'')}</p><div class="scriptlabel">Important guardrail</div><p>${esc(r['Important Guardrail']||'')}</p></article>`).join('')+'</div>';
-}
-function filterScripts(){const q=(document.getElementById('scriptSearch')?.value||'').toLowerCase();paintScripts(scriptRows.filter(r=>JSON.stringify(r).toLowerCase().includes(q)));}
-async function saveForm(){const record={};document.querySelectorAll('#formFields [data-field]').forEach(el=>record[el.dataset.field]=el.value);if(formMode==='call'&&!record['Company / Prospect']){alert('Please enter the company or prospect name.');return;}try{if(formMode==='call'){await callServer('saveRecord','CALL LOG',null,record);}else{await callServer('saveRecord',currentSheet,editingRow,record);}closeModal();if(formMode==='call'){await refreshDashboard();await openSheet('CALL LOG');}else{await loadCurrent();await refreshDashboard();}}catch(e){alert('Save failed: '+e.message);}}
-function closeModal(){document.getElementById('modalBack').style.display='none';}
-function esc(v){return String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}function attr(v){return esc(v).replace(/\n/g,' ');}
-document.querySelector('.btn.primary').addEventListener('click',()=>{});
-// Route the dashboard call button to the dedicated call-entry form.
-document.querySelector('#dashboardView .actions .btn.primary').onclick=openCallForm;
-loadInitial();
-</script></body></html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description" content="Leth Liwanag is an Executive Operations and Digital Strategy Specialist experienced in C-suite support, business operations, grant development, website development, and digital marketing.">
+
+  <meta name="author" content="Leth Liwanag">
+  <meta name="theme-color" content="#111312">
+
+  <title>Leth Liwanag | Executive Operations & Digital Strategy</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <a class="brand" href="#home">LETH<span>.</span></a>
+
+    <button
+      class="menu-toggle"
+      aria-label="Toggle navigation"
+      aria-expanded="false"
+      aria-controls="main-navigation">
+      ☰
+    </button>
+
+    <nav class="nav" id="main-navigation">
+      <a href="#about">About</a>
+      <a href="#expertise">Expertise</a>
+      <a href="#work">Selected Work</a>
+      <a href="#achievements">Achievements</a>
+      <a href="#contact" class="nav-cta">Let's connect</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+
+      <div class="hero-copy">
+
+        <p class="eyebrow">
+          EXECUTIVE OPERATIONS · DIGITAL STRATEGY · TECHNOLOGY
+        </p>
+
+        <h1>
+          Driving business operations and building
+          <em>better digital solutions.</em>
+        </h1>
+
+        <p class="lead">
+          I'm Leth Liwanag, an Executive Operations and Digital Strategy
+          Specialist with experience supporting CEOs, presidents, and
+          COOs across business and nonprofit organizations.
+
+          I coordinate executive operations, manage grant development
+          activities, maintain organizational websites, execute digital
+          marketing initiatives, and develop documentation and processes
+          that support organizational performance.
+        </p>
+
+        <div class="hero-actions">
+          <a class="button primary" href="#work">
+            Explore my work <span>↗</span>
+          </a>
+
+          <a class="button secondary" href="#contact">
+            Get in touch
+          </a>
+        </div>
+
+        <div class="hero-note">
+          <span class="status-dot"></span>
+          Executive support. Independent execution. Measurable improvements.
+        </div>
+
+      </div>
+
+      <div class="hero-portrait" aria-label="Portrait of Leth Liwanag">
+        <img
+          src="assets/leth-liwanag-portrait.png"
+          alt="Professional portrait of Leth Liwanag">
+      </div>
+
+    </section>
+
+
+    <!-- AREAS OF FOCUS -->
+    <section class="ticker" aria-label="Areas of professional expertise">
+
+      <span>EXECUTIVE OPERATIONS</span>
+      <i>✳</i>
+
+      <span>GRANT DEVELOPMENT</span>
+      <i>✳</i>
+
+      <span>WEB DEVELOPMENT</span>
+      <i>✳</i>
+
+      <span>DIGITAL MARKETING</span>
+      <i>✳</i>
+
+      <span>AI-ASSISTED WORKFLOWS</span>
+
+    </section>
+
+
+    <!-- ABOUT -->
+    <section class="section about" id="about">
+
+      <div class="section-label">01 / ABOUT</div>
+
+      <div class="section-content">
+
+        <h2>
+          Connecting leadership, operations, and technology.
+          <br>
+          <em>From strategy to execution.</em>
+        </h2>
+
+        <p class="section-intro">
+          I bring together executive operations, business administration,
+          digital strategy, and technology to help organizations operate
+          more effectively. Since 2018, I have worked across administrative
+          operations, web design, digital marketing, and executive support,
+          taking ownership of projects that require organization,
+          communication, technical skills, and follow-through.
+        </p>
+
+        <p>
+          At Ryter Cooperative Industries, I support CEOs and senior
+          leadership while coordinating operational activities across
+          a clean energy company and its sister nonprofit, Lumens Foundation.
+          My responsibilities extend beyond executive assistance to grant
+          prospect research, grant writing, online applications, website
+          management, social media, newsletters, marketing materials,
+          and organizational documentation.
+        </p>
+
+        <p>
+          Previously, at G-Plus Tech Solution, I coordinated administrative
+          operations, developed responsive websites, supported digital
+          marketing campaigns, and implemented paperless workflows.
+          At Adonijah Computer Sales and Repair, I managed office
+          administration, website design, graphic design, and customized
+          digital solutions for clients.
+        </p>
+
+        <p>
+          I also use AI-assisted tools to support research, content
+          development, documentation, and day-to-day productivity.
+          My approach combines hands-on execution, process improvement,
+          technical adaptability, and dependable operational support.
+        </p>
+
+        <div class="values">
+
+          <div>
+            <b>01</b>
+            <span>Take ownership of operational priorities</span>
+          </div>
+
+          <div>
+            <b>02</b>
+            <span>Turn organizational needs into practical solutions</span>
+          </div>
+
+          <div>
+            <b>03</b>
+            <span>Execute, document, and continuously improve</span>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- EXPERTISE -->
+    <section class="section expertise" id="expertise">
+
+      <div class="section-label">02 / EXPERTISE</div>
+
+      <div class="section-content">
+
+        <h2>
+          What I bring to <em>the table.</em>
+        </h2>
+
+        <div class="service-grid">
+
+          <article class="service-card">
+
+            <div class="icon">↗</div>
+
+            <h3>Executive & Business Operations</h3>
+
+            <p>
+              Coordinate executive calendars, leadership meetings,
+              stakeholder communications, research, reports, and
+              follow-up activities. Prepare employee handbook materials,
+              develop standard operating procedures, and coordinate
+              cross-functional operational priorities.
+            </p>
+
+            <span>EXECUTIVE SUPPORT · OPERATIONS</span>
+
+          </article>
+
+
+          <article class="service-card">
+
+            <div class="icon">⌘</div>
+
+            <h3>Grant & Nonprofit Development</h3>
+
+            <p>
+              Research funding opportunities for for-profit and nonprofit
+              organizations, evaluate alignment with organizational goals,
+              prepare grant narratives and written responses, complete
+              online applications, and coordinate supporting documents
+              and submission requirements.
+            </p>
+
+            <span>GRANT RESEARCH · DEVELOPMENT</span>
+
+          </article>
+
+
+          <article class="service-card">
+
+            <div class="icon">▦</div>
+
+            <h3>Website Development & Management</h3>
+
+            <p>
+              Design, develop, update, and maintain responsive websites
+              using HTML, CSS, WordPress, Wix, Shopify, and GoDaddy.
+              Improve website content, usability, responsive layouts,
+              and routine website functionality.
+            </p>
+
+            <span>WEB DEVELOPMENT · WEBSITE MANAGEMENT</span>
+
+          </article>
+
+
+          <article class="service-card">
+
+            <div class="icon">◎</div>
+
+            <h3>Digital Marketing & Communications</h3>
+
+            <p>
+              Manage social media publishing and direct-message engagement.
+              Produce newsletters, email campaigns, graphics, marketing
+              materials, and website content. Support digital campaigns
+              through content strategy and audience engagement.
+            </p>
+
+            <span>DIGITAL MARKETING · COMMUNICATIONS</span>
+
+          </article>
+
+
+          <article class="service-card">
+
+            <div class="icon">⌘</div>
+
+            <h3>AI-Assisted Productivity & Workflows</h3>
+
+            <p>
+              Apply AI-assisted tools to research, organize information,
+              develop content, prepare documentation, and support
+              recurring administrative and business activities.
+            </p>
+
+            <span>AI TOOLS · WORKFLOW SUPPORT</span>
+
+          </article>
+
+
+          <article class="service-card">
+
+            <div class="icon">✳</div>
+
+            <h3>Creative & Digital Solutions</h3>
+
+            <p>
+              Create logos, business cards, brochures, flyers,
+              promotional graphics, newsletters, and digital content.
+              Develop visual materials that support brand presentation
+              and organizational communications.
+            </p>
+
+            <span>GRAPHIC DESIGN · CONTENT PRODUCTION</span>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- SELECTED WORK -->
+    <section class="section work" id="work">
+
+      <div class="section-label">03 / SELECTED WORK</div>
+
+      <div class="section-content">
+
+        <h2>
+          Work that delivers <em>practical results.</em>
+        </h2>
+
+        <p class="section-intro">
+          My professional experience covers executive support,
+          business operations, grant development, website management,
+          and digital marketing. The following examples highlight
+          projects and responsibilities from my employment history.
+        </p>
+
+        <div class="project-list">
+
+
+          <article class="project">
+
+            <div class="project-number">01</div>
+
+            <div>
+
+              <p class="project-type">
+                EXECUTIVE & BUSINESS OPERATIONS
+              </p>
+
+              <h3>
+                Cross-Functional Leadership & Operational Support
+              </h3>
+
+              <p>
+                Support CEOs, presidents, and COOs by coordinating
+                executive schedules, meetings, stakeholder communications,
+                research, reports, and operational follow-ups.
+
+                Coordinate activities across a clean energy company
+                and its sister nonprofit, including organizational
+                documentation, employee handbook materials,
+                and standard operating procedures.
+              </p>
+
+              <div class="tags">
+                <span>C-Suite Support</span>
+                <span>Project Coordination</span>
+                <span>SOP Development</span>
+                <span>Stakeholder Communications</span>
+              </div>
+
+            </div>
+
+            <div class="project-arrow">↗</div>
+
+          </article>
+
+
+          <article class="project">
+
+            <div class="project-number">02</div>
+
+            <div>
+
+              <p class="project-type">
+                GRANT & NONPROFIT DEVELOPMENT
+              </p>
+
+              <h3>
+                Funding Research & Grant Application Management
+              </h3>
+
+              <p>
+                Identify and assess grant opportunities for both
+                for-profit and nonprofit organizations. Prepare
+                funding narratives, written application responses,
+                and supporting content; complete online applications
+                and coordinate submission requirements.
+
+                Revitalize an inactive nonprofit website to strengthen
+                its online advocacy visibility and audience engagement.
+              </p>
+
+              <div class="tags">
+                <span>Grant Research</span>
+                <span>Grant Writing</span>
+                <span>Nonprofit Development</span>
+                <span>Online Applications</span>
+              </div>
+
+            </div>
+
+            <div class="project-arrow">↗</div>
+
+          </article>
+
+
+          <article class="project">
+
+            <div class="project-number">03</div>
+
+            <div>
+
+              <p class="project-type">
+                WEB DEVELOPMENT & DIGITAL MARKETING
+              </p>
+
+              <h3>
+                Website Development & Digital Communications
+              </h3>
+
+              <p>
+                Design and maintain responsive websites, improve
+                website content and user experience, manage social
+                media channels, respond to direct messages, and
+                produce newsletters, email marketing, graphics,
+                and promotional materials.
+
+                Implement paperless processes to reduce manual
+                administrative work and improve business efficiency.
+              </p>
+
+              <div class="tags">
+                <span>HTML & CSS</span>
+                <span>WordPress & Wix</span>
+                <span>Social Media</span>
+                <span>Email Marketing</span>
+              </div>
+
+            </div>
+
+            <div class="project-arrow">↗</div>
+
+          </article>
+
+
+          <article class="project">
+
+            <div class="project-number">04</div>
+
+            <div>
+
+              <p class="project-type">
+                ADMINISTRATIVE PROCESS IMPROVEMENT
+              </p>
+
+              <h3>
+                Paperless Workflows & Office Efficiency
+              </h3>
+
+              <p>
+                Introduce paperless administrative processes,
+                organize office documentation, coordinate schedules,
+                and reduce repetitive manual tasks. At Adonijah,
+                these improvements were associated with approximately
+                2.5 hours of administrative time saved per week.
+              </p>
+
+              <div class="tags">
+                <span>Paperless Processes</span>
+                <span>Administration</span>
+                <span>Process Improvement</span>
+              </div>
+
+            </div>
+
+            <div class="project-arrow">↗</div>
+
+          </article>
+
+        </div>
+
+        <p class="disclaimer">
+          Project descriptions are based on my professional experience.
+          Confidential client and employer information is excluded.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- ACHIEVEMENTS -->
+    <section class="section achievements" id="achievements">
+
+      <div class="section-label">04 / ACHIEVEMENTS</div>
+
+      <div class="section-content">
+
+        <h2>
+          Measuring the impact of <em>my work.</em>
+        </h2>
+
+        <p class="section-intro">
+          Selected performance improvements associated with my
+          responsibilities and contributions across previous
+          professional engagements.
+        </p>
+
+        <div class="service-grid">
+
+          <article class="service-card">
+            <div class="icon">↗</div>
+            <h3>95% Reduction</h3>
+            <p>
+              Reduction in outsourced service costs associated with
+              website, graphic design, content, and marketing services.
+            </p>
+            <span>RYTER COOPER INDUSTRIES</span>
+          </article>
+
+          <article class="service-card">
+            <div class="icon">⌘</div>
+            <h3>85% Improvement</h3>
+            <p>
+              Improvement in grant application processing efficiency,
+              based on prior internal estimates.
+            </p>
+            <span>RYTER COOPER INDUSTRIES</span>
+          </article>
+
+          <article class="service-card">
+            <div class="icon">↗</div>
+            <h3>40% Increase</h3>
+            <p>
+              Increase in online sales revenue associated with website
+              and marketing improvements.
+            </p>
+            <span>G-PLUS TECH SOLUTION</span>
+          </article>
+
+          <article class="service-card">
+            <div class="icon">◎</div>
+            <h3>85% Increase</h3>
+            <p>
+              Increase in brand awareness associated with digital
+              marketing campaigns.
+            </p>
+            <span>G-PLUS TECH SOLUTION</span>
+          </article>
+
+          <article class="service-card">
+            <div class="icon">▦</div>
+            <h3>60% Increase</h3>
+            <p>
+              Increase in mobile and tablet website traffic
+              associated with responsive website development.
+            </p>
+            <span>G-PLUS TECH SOLUTION</span>
+          </article>
+
+          <article class="service-card">
+            <div class="icon">✳</div>
+            <h3>2.5 Hours Saved Weekly</h3>
+            <p>
+              Reduction in manual administrative work through
+              paperless processes and workflow improvements.
+            </p>
+            <span>ADONIJAH COMPUTER SALES AND REPAIR</span>
+          </article>
+
+        </div>
+
+        <p class="disclaimer">
+          Figures reflect reported organizational results and
+          internal estimates documented in my resume. They are
+          not presented as independently audited measurements.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- PRINCIPLE -->
+    <section class="quote-band">
+
+      <p>
+        "I don't just support the work. I take ownership of the
+        details, improve the processes, and help turn priorities
+        into results."
+      </p>
+
+      <span>MY WORKING PRINCIPLE</span>
+
+    </section>
+
+
+    <!-- TECHNICAL SKILLS -->
+    <section class="section skills" id="skills">
+
+      <div class="section-label">05 / TOOLS & SKILLS</div>
+
+      <div class="section-content">
+
+        <h2>
+          Technology, tools, and <em>capabilities.</em>
+        </h2>
+
+        <p class="section-intro">
+          Practical experience with digital platforms and productivity
+          tools used to coordinate operations, develop content,
+          manage websites, and support business activities.
+        </p>
+
+        <div class="service-grid">
+
+          <article class="service-card">
+            <h3>Web Development</h3>
+            <p>
+              HTML, CSS, WordPress, Wix, Shopify, and GoDaddy.
+            </p>
+            <span>WEB TECHNOLOGY</span>
+          </article>
+
+          <article class="service-card">
+            <h3>Business & Productivity</h3>
+            <p>
+              Google Workspace, Google Calendar, Microsoft Outlook,
+              Asana, and HubSpot.
+            </p>
+            <span>OPERATIONS & PRODUCTIVITY</span>
+          </article>
+
+          <article class="service-card">
+            <h3>Digital Marketing</h3>
+            <p>
+              Social media management, email marketing, newsletters,
+              SEO, content strategy, and campaign analytics.
+            </p>
+            <span>MARKETING & COMMUNICATIONS</span>
+          </article>
+
+          <article class="service-card">
+            <h3>Creative Production</h3>
+            <p>
+              Canva, GIMP, iMovie, graphic design, video editing,
+              and digital content production.
+            </p>
+            <span>CREATIVE TOOLS</span>
+          </article>
+
+          <article class="service-card">
+            <h3>AI-Assisted Tools</h3>
+            <p>
+              AI-assisted research, content development,
+              documentation, and workflow support.
+            </p>
+            <span>AI & PRODUCTIVITY</span>
+          </article>
+
+          <article class="service-card">
+            <h3>Grant & Nonprofit Administration</h3>
+            <p>
+              Grant prospect research, funding assessment,
+              proposal writing, application preparation,
+              and nonprofit communications.
+            </p>
+            <span>GRANT DEVELOPMENT</span>
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- EDUCATION -->
+    <section class="section education" id="education">
+
+      <div class="section-label">06 / EDUCATION</div>
+
+      <div class="section-content">
+
+        <h2>
+          Academic <em>background.</em>
+        </h2>
+
+        <h3>
+          Bachelor of Arts, Major in English
+        </h3>
+
+        <p>
+          Jose Rizal University
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- CONTACT -->
+    <section class="section contact" id="contact">
+
+      <div class="section-label">07 / CONTACT</div>
+
+      <div class="section-content">
+
+        <h2>
+          Let's make better work <em>happen.</em>
+        </h2>
+
+        <p class="section-intro">
+          I welcome opportunities involving executive operations,
+          business administration, digital strategy, grant and
+          nonprofit development, website management, and
+          technology-enabled business support.
+
+          If your organization needs someone who can coordinate
+          operations, manage multiple responsibilities, and
+          independently execute projects, let's connect.
+        </p>
+
+        <div class="contact-actions">
+
+          <a
+            class="button primary"
+            href="https://www.linkedin.com/"
+            target="_blank"
+            rel="noopener noreferrer">
+            Connect on LinkedIn <span>↗</span>
+          </a>
+
+          <a
+            class="button secondary"
+            href="mailto:leth.liwanag.work@gmail.com?subject=Professional%20Inquiry">
+            Email me
+          </a>
+
+        </div>
+
+        <p class="small-note">
+          Email: leth.liwanag.work@gmail.com
+        </p>
+
+        <p class="small-note">
+          LinkedIn: Update the button with your actual profile URL
+          before publishing your final portfolio.
+        </p>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- FOOTER -->
+  <footer>
+
+    <a class="brand" href="#home">
+      LETH<span>.</span>
+    </a>
+
+    <span>
+      © <span id="year"></span> Leth Liwanag. Built with purpose.
+    </span>
+
+    <a href="#home">
+      Back to top ↑
+    </a>
+
+  </footer>
+
+
+  <!-- LOCAL WEBSITE JAVASCRIPT ONLY -->
+  <script src="script.js"></script>
+
+</body>
+</html>
