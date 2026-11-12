@@ -651,52 +651,61 @@ footer > a:last-child:hover {
         text-align: center !important;
     }
 }
-/* =====================================
-   MOBILE SKILLS LAYOUT FIX
-   Desktop remains unchanged
-===================================== */
-
+/* MOBILE PROFESSIONAL EXPERTISE FIX */
 @media screen and (max-width: 650px) {
 
-    /* Skills section spacing */
-    .skills {
-        width: 100% !important;
-        box-sizing: border-box !important;
-        padding: 45px 20px !important;
-        margin: 0 !important;
+    section.ticker {
         display: flex !important;
         flex-direction: column !important;
+        flex-wrap: nowrap !important;
         align-items: center !important;
         justify-content: center !important;
-        gap: 30px !important;
+        gap: 22px !important;
+
+        width: 100% !important;
+        height: auto !important;
+        min-height: 0 !important;
+
+        padding: 40px 20px !important;
+        margin: 0 !important;
+
+        box-sizing: border-box !important;
+        overflow: hidden !important;
+        transform: none !important;
     }
 
-    /* Individual skill items */
-    .skills .service-card {
+    section.ticker .ticker-item {
         display: flex !important;
         flex-direction: row !important;
         align-items: center !important;
         justify-content: center !important;
+        gap: 12px !important;
+
         width: 100% !important;
-        min-height: 0 !important;
         height: auto !important;
+        min-height: 0 !important;
+
         margin: 0 !important;
         padding: 8px 0 !important;
-        text-align: center !important;
-        gap: 14px !important;
+
         box-sizing: border-box !important;
+        text-align: center !important;
+        transform: none !important;
     }
 
-    /* Skill text */
-    .skills .service-card * {
-        max-width: 100%;
-        box-sizing: border-box;
+    section.ticker .ticker-item span {
+        display: inline-block !important;
+        text-align: center !important;
+        font-size: 12px !important;
+        letter-spacing: 2px !important;
+        line-height: 1.6 !important;
+        max-width: 90% !important;
     }
 
-    /* Prevent horizontal overflow */
-    .skills,
-    .skills .service-card {
-        overflow-wrap: break-word;
+    section.ticker .ticker-item i {
+        display: inline-block !important;
+        flex-shrink: 0 !important;
+        margin: 0 !important;
     }
 
 }
