@@ -1,957 +1,164 @@
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <meta name="description" content="Leth Liwanag is an Executive Operations and Digital Solutions Specialist combining executive support, business operations, web development, digital marketing, grant development, and AI-assisted workflows.">
-  <meta name="author" content="Leth Liwanag">
-  <meta name="theme-color" content="#111312">
-
-  <title>Leth Liwanag | Executive Operations & Digital Solutions</title>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="styles.css">
-
-  <!-- MOBILE RESPONSIVE PRESENTATION -->
-  <style>
-    @media screen and (max-width: 768px) {
-      body {
-        text-align: center;
-        overflow-x: hidden;
-      }
-
-      .hero {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-      }
-
-      .hero-copy,
-      .hero-portrait {
-        width: 100%;
-        text-align: center;
-        margin-left: auto;
-        margin-right: auto;
-      }
-
-      .hero-portrait img {
-        display: block;
-        max-width: 85%;
-        height: auto;
-        margin: 0 auto;
-      }
-
-      .hero-actions,
-      .contact-actions {
-        justify-content: center;
-        flex-wrap: wrap;
-      }
-
-      .section,
-      .section-content {
-        text-align: center;
-      }
-
-      .section-intro,
-      .section-content > p {
-        text-align: center;
-      }
-
-      .service-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .service-card {
-        text-align: center;
-      }
-
-      .skills .service-card ul {
-        display: inline-block !important;
-        list-style: disc outside !important;
-        text-align: left !important;
-        padding-left: 25px !important;
-        margin: 15px auto 20px !important;
-      }
-
-      .skills .service-card ul li {
-        display: list-item !important;
-        list-style: disc outside !important;
-        text-align: left !important;
-        background: none !important;
-        border: none !important;
-        box-shadow: none !important;
-        padding: 5px 0 !important;
-        margin: 0 !important;
-      }
-
-      .skills .service-card ul li::before,
-      .skills .service-card ul li::after {
-        content: none !important;
-      }
-
-      .project {
-        text-align: center;
-      }
-
-      .tags {
-        justify-content: center;
-      }
-
-      .values {
-        text-align: center;
-      }
-
-      .contact,
-      footer {
-        text-align: center;
-      }
-
-      .contact-actions {
-        display: flex;
-        align-items: center;
-      }
-
-      .small-note {
-        text-align: center;
-      }
-
-      .quote-band {
-        text-align: center;
-      }
-    }
-  </style>
-</head>
+<!-- 05 / TOOLS & SKILLS -->
+<section class="section skills" id="skills">
 
-<body>
+  <div class="section-label">05 / TOOLS & SKILLS</div>
 
-  <!-- HEADER -->
-  <header class="site-header">
-    <a class="brand" href="#home">LETH<span>.</span></a>
+  <div class="section-content">
 
-    <button
-      class="menu-toggle"
-      aria-label="Toggle navigation"
-      aria-expanded="false"
-      aria-controls="main-navigation">
-      ☰
-    </button>
-
-    <nav class="nav" id="main-navigation">
-      <a href="#about">About</a>
-      <a href="#expertise">Expertise</a>
-      <a href="#work">Selected Work</a>
-      <a href="#achievements">Achievements</a>
-      <a href="#contact" class="nav-cta">Let's connect</a>
-    </nav>
-  </header>
-
-  <main>
-
-    <!-- HERO -->
-    <section class="hero" id="home">
-
-      <div class="hero-copy">
-
-        <p class="eyebrow">
-          EXECUTIVE OPERATIONS · DIGITAL STRATEGY · AI-ENABLED SOLUTIONS
-        </p>
-
-        <h1>
-          Turning complex responsibilities into
-          <em>organized, meaningful results.</em>
-        </h1>
-
-        <p class="lead">
-          I'm Leth Liwanag, an Executive Operations and Digital Solutions
-          Specialist who bridges leadership support, business operations,
-          technology, and digital strategy. I work across executive
-          coordination, grant development, website management, digital
-          marketing, and AI-assisted workflows—bringing structure,
-          initiative, and practical execution to organizational priorities.
-        </p>
-
-        <div class="hero-actions">
-          <a class="button primary" href="#work">
-            Explore my work <span>↗</span>
-          </a>
-
-          <a class="button secondary" href="#contact">
-            Get in touch
-          </a>
-        </div>
-
-        <div class="hero-note">
-          <span class="status-dot"></span>
-          Strategic support. Independent execution. Practical solutions.
-        </div>
-
-      </div>
-
-      <div class="hero-portrait" aria-label="Portrait of Leth Liwanag">
-        <img
-          src="assets/leth-liwanag-portrait.png"
-          alt="Professional portrait of Leth Liwanag">
-      </div>
-
-    </section>
-
-
-    <!-- AREAS OF FOCUS -->
-    <section class="ticker" aria-label="Professional expertise">
-
-      <span>EXECUTIVE OPERATIONS</span>
-      <i>✳</i>
-
-      <span>BUSINESS PROCESS IMPROVEMENT</span>
-      <i>✳</i>
-
-      <span>WEB DEVELOPMENT</span>
-      <i>✳</i>
-
-      <span>DIGITAL MARKETING</span>
-      <i>✳</i>
-
-      <span>AI-ASSISTED WORKFLOWS</span>
-
-    </section>
-
-
-    <!-- ABOUT -->
-    <section class="section about" id="about">
-
-      <div class="section-label">01 / ABOUT</div>
-
-      <div class="section-content">
-
-        <h2>
-          Connecting leadership, operations, and technology.
-          <br>
-          <em>From strategy to execution.</em>
-        </h2>
-
-        <p class="section-intro">
-          I bring together executive operations, business administration,
-          digital strategy, and technology to help organizations work
-          smarter and operate more effectively. Since 2018, I have worked
-          across administrative operations, web development, digital
-          marketing, and executive support—taking ownership of projects
-          that require organization, communication, technical adaptability,
-          and consistent follow-through.
-        </p>
-
-        <p>
-          My experience includes supporting senior executives in the
-          renewable energy and clean technology sector, coordinating
-          operational priorities, and providing digital and administrative
-          support across business functions. My responsibilities have
-          included executive scheduling, stakeholder communications,
-          research, reporting, grant development, website management,
-          social media, newsletters, marketing materials, and organizational
-          documentation.
-        </p>
-
-        <p>
-          I have also supported nonprofit and foundation development,
-          including funding opportunity research, grant narratives,
-          application preparation, submission coordination, and nonprofit
-          website development. This work combines administrative execution
-          with an understanding of organizational goals, funding priorities,
-          and community-focused initiatives.
-        </p>
-
-        <p>
-          Earlier in my career, I worked in digital solutions and technology,
-          developing responsive websites, improving user experience,
-          supporting digital marketing campaigns, creating visual materials,
-          and implementing paperless administrative workflows.
-        </p>
-
-        <p>
-          I use AI-assisted tools to support research, content development,
-          documentation, and workflow efficiency. I am particularly
-          interested in practical ways technology can simplify work,
-          improve processes, and help teams focus on higher-value priorities.
-        </p>
-
-        <div class="values">
-
-          <div>
-            <b>01</b>
-            <span>Take ownership of priorities and deliverables</span>
-          </div>
-
-          <div>
-            <b>02</b>
-            <span>Turn organizational needs into practical solutions</span>
-          </div>
-
-          <div>
-            <b>03</b>
-            <span>Combine technology, initiative, and execution</span>
-          </div>
-
-        </div>
-
-      </div>
+    <h2>
+      Skills, tools, and <em>capabilities.</em>
+    </h2>
 
-    </section>
-
-
-    <!-- EXPERTISE -->
-    <section class="section expertise" id="expertise">
-
-      <div class="section-label">02 / EXPERTISE</div>
-
-      <div class="section-content">
-
-        <h2>
-          What I bring to <em>the table.</em>
-        </h2>
+    <p class="section-intro">
+      A practical combination of business, administrative,
+      creative, and technical capabilities. My experience
+      allows me to move between executive support, digital
+      projects, and operational responsibilities.
+    </p>
 
-        <div class="service-grid">
+    <div class="service-grid">
 
-          <article class="service-card">
-            <div class="icon">↗</div>
+      <!-- EXECUTIVE & BUSINESS OPERATIONS -->
+      <article class="service-card">
 
-            <h3>Executive & Business Operations</h3>
+        <h3>Executive & Business Operations</h3>
 
-            <p>
-              Support executives and leadership teams through calendar
-              management, meeting coordination, stakeholder communications,
-              research, reports, and follow-up activities. Prepare
-              organizational documentation, employee handbook materials,
-              standard operating procedures, and cross-functional
-              operational support.
-            </p>
+        <ul style="display:block !important; list-style:disc outside !important; padding-left:25px !important; margin:15px 0 20px !important;">
+          <li style="display:list-item !important; list-style:disc !important; border:0 !important; background:none !important; box-shadow:none !important; padding:5px 0 !important;">Executive Support</li>
+          <li style="display:list-item !important; list-style:disc !important; border:0 !important; background:none !important; box-shadow:none !important; padding:5px 0 !important;">Calendar Management</li>
+          <li style="display:list-item !important; list-style:disc !important; border:0 !important; background:none !important; box-shadow:none !important; padding:5px 0 !important;">Meeting Coordination</li>
+          <li style="display:list-item !important; list-style:disc !important; border:0 !important; background:none !important; box-shadow:none !important; padding:5px 0 !important;">Stakeholder Communications</li>
+          <li style="display:list-item !important; list-style:disc !important; border:0 !important; background:none !important; box-shadow:none !important; padding:5px 0 !important;">Project Coordination</li>
+          <li style="display:list-item !important; list-style:disc !important; border:0 !important; background:none !important; box-shadow:none !important; padding:5px 0 !important;">SOP Development</li>
+          <li style="display:list-item !important; list-style:disc !important; border:0 !important; background:none !important; box-shadow:none !important; padding:5px 0 !important;">Business Administration</li>
+          <li style="display:list-item !important; list-style:disc !important; border:0 !important; background:none !important; box-shadow:none !important; padding:5px 0 !important;">Process Improvement</li>
+        </ul>
 
-            <span>EXECUTIVE SUPPORT · OPERATIONS</span>
-          </article>
+        <span>OPERATIONS & LEADERSHIP SUPPORT</span>
 
-          <article class="service-card">
-            <div class="icon">⌘</div>
+      </article>
 
-            <h3>Grant & Nonprofit Development</h3>
 
-            <p>
-              Research funding opportunities, assess eligibility and
-              organizational alignment, prepare grant narratives and
-              application responses, coordinate supporting documents,
-              and manage online application and submission requirements
-              for nonprofit and business initiatives.
-            </p>
+      <!-- WEB DEVELOPMENT & DESIGN -->
+      <article class="service-card">
 
-            <span>GRANT RESEARCH · DEVELOPMENT</span>
-          </article>
+        <h3>Web Development & Design</h3>
 
-          <article class="service-card">
-            <div class="icon">▦</div>
+        <ul style="display:block !important; list-style:disc outside !important; padding-left:25px !important; margin:15px 0 20px !important;">
+          <li style="display:list-item !important; list-style:disc !important; border:0 !important; background:none !important; box-shadow:none !important; padding:5px 0 !important;">HTML</li>
+          <li style="display:list-item !important; list-style:disc !important; border:0 !important; background:none !important; box-shadow:none !important; padding:5px 0 !important;">CSS</li>
+          <li style="display:list-item !important; list-style:disc !important; border:0 !important; background:none !important; box-shadow:none !important; padding:5px 0 !important;">WordPress</li>
+          <li style="display:list-item !important; list-style:disc !important; border:0 !important; background:none !important; box-shadow:none !important; padding:5px 0 !important;">Wix</li>
+          <li style="display:list-item !important; list-style:disc !important; border:0 !important; background:none !important; box-shadow:none !important; padding:5px 0 !important;">Shopify</li>
+          <li style="display:list-item !important; list-style:disc !important; border:0 !important; background:none !important; box-shadow:none !important; padding:5px 0 !important;">GoDaddy</li>
+          <li style="display:list-item !important; list-style:disc !important; border:0 !important; background:none !important; box-shadow:none !important; padding:5px 0 !important;">Responsive Website Development</li>
+          <li style="display:list-item !important; list-style:disc !important; border:0 !important; background:none !important; box-shadow:none !important; padding:5px 0 !important;">UX & Content Review</li>
+        </ul>
 
-            <h3>Website Development & Management</h3>
+        <span>WEB TECHNOLOGY</span>
 
-            <p>
-              Design, develop, update, and maintain responsive websites.
-              Work with HTML, CSS, WordPress, Wix, Shopify, and GoDaddy
-              to improve website content, usability, responsive layouts,
-              visual presentation, and functionality.
-            </p>
+      </article>
 
-            <span>WEB DEVELOPMENT · WEBSITE MANAGEMENT</span>
-          </article>
 
-          <article class="service-card">
-            <div class="icon">◎</div>
+      <!-- AI & DIGITAL PRODUCTIVITY -->
+      <article class="service-card">
 
-            <h3>Digital Marketing & Communications</h3>
+        <h3>AI & Digital Productivity</h3>
 
-            <p>
-              Manage social media publishing, audience engagement,
-              direct messages, newsletters, email campaigns, graphics,
-              marketing materials, and website content. Support brand
-              consistency and digital communication initiatives.
-            </p>
+        <ul style="display:block !important; list-style:disc outside !important; padding-left:25px !important; margin:15px 0 20px !important;">
+          <li style="display:list-item !important; list-style:disc !important; border:0 !important; background:none !important; box-shadow:none !important; padding:5px 0 !important;">AI-Assisted Research</li>
+          <li style="display:list-item !important; list-style:disc !important; border:0 !important; background:none !important; box-shadow:none !important; padding:5px 0 !important;">AI Content Development</li>
+          <li style="display:list-item !important; list-style:disc !important; border:0 !important; background:none !important; box-shadow:none !important; padding:5px 0 !important;">Documentation</li>
+          <li style="display:list-item !important; list-style:disc !important; border:0 !important; background:none !important; box-shadow:none !important; padding:5px 0 !important;">Workflow Support</li>
+          <li style="display:list-item !important; list-style:disc !important; border:0 !important; background:none !important; box-shadow:none !important; padding:5px 0 !important;">Process Optimization</li>
+          <li style="display:list-item !important; list-style:disc !important; border:0 !important; background:none !important; box-shadow:none !important; padding:5px 0 !important;">Digital Solutions</li>
+        </ul>
 
-            <span>DIGITAL MARKETING · COMMUNICATIONS</span>
-          </article>
+        <span>AI-ENABLED WORKFLOWS</span>
 
-          <article class="service-card">
-            <div class="icon">⌘</div>
+      </article>
 
-            <h3>AI-Assisted Productivity & Workflows</h3>
 
-            <p>
-              Use AI-assisted tools for research, content development,
-              information organization, documentation, and routine
-              business activities. Explore practical opportunities
-              to improve productivity and simplify workflows.
-            </p>
+      <!-- DIGITAL MARKETING -->
+      <article class="service-card">
 
-            <span>AI TOOLS · WORKFLOW SUPPORT</span>
-          </article>
+        <h3>Digital Marketing & Communications</h3>
 
-          <article class="service-card">
-            <div class="icon">✳</div>
+        <ul style="display:block !important; list-style:disc outside !important; padding-left:25px !important; margin:15px 0 20px !important;">
+          <li style="display:list-item !important; list-style:disc !important; border:0 !important; background:none !important; box-shadow:none !important; padding:5px 0 !important;">Social Media Management</li>
+          <li style="display:list-item !important; list-style:disc !important; border:0 !important; background:none !important; box-shadow:none !important; padding:5px 0 !important;">Email Marketing</li>
+          <li style="display:list-item !important; list-style:disc !important; border:0 !important; background:none !important; box-shadow:none !important; padding:5px 0 !important;">Newsletters</li>
+          <li style="display:list-item !important; list-style:disc !important; border:0 !important; background:none !important; box-shadow:none !important; padding:5px 0 !important;">SEO</li>
+          <li style="display:list-item !important; list-style:disc !important; border:0 !important; background:none !important; box-shadow:none !important; padding:5px 0 !important;">Content Strategy</li>
+          <li style="display:list-item !important; list-style:disc !important; border:0 !important; background:none !important; box-shadow:none !important; padding:5px 0 !important;">Audience Engagement</li>
+          <li style="display:list-item !important; list-style:disc !important; border:0 !important; background:none !important; box-shadow:none !important; padding:5px 0 !important;">Campaign Analytics</li>
+        </ul>
 
-            <h3>Creative & Digital Solutions</h3>
+        <span>MARKETING & COMMUNICATIONS</span>
 
-            <p>
-              Create websites, logos, business cards, brochures, flyers,
-              promotional graphics, newsletters, and digital content.
-              Develop visual materials that support brand presentation
-              and organizational communication.
-            </p>
+      </article>
 
-            <span>GRAPHIC DESIGN · CONTENT PRODUCTION</span>
-          </article>
 
-        </div>
+      <!-- CREATIVE PRODUCTION -->
+      <article class="service-card">
 
-      </div>
+        <h3>Creative Production</h3>
 
-    </section>
+        <ul style="display:block !important; list-style:disc outside !important; padding-left:25px !important; margin:15px 0 20px !important;">
+          <li style="display:list-item !important; list-style:disc !important; border:0 !important; background:none !important; box-shadow:none !important; padding:5px 0 !important;">Canva</li>
+          <li style="display:list-item !important; list-style:disc !important; border:0 !important; background:none !important; box-shadow:none !important; padding:5px 0 !important;">GIMP</li>
+          <li style="display:list-item !important; list-style:disc !important; border:0 !important; background:none !important; box-shadow:none !important; padding:5px 0 !important;">iMovie</li>
+          <li style="display:list-item !important; list-style:disc !important; border:0 !important; background:none !important; box-shadow:none !important; padding:5px 0 !important;">Graphic Design</li>
+          <li style="display:list-item !important; list-style:disc !important; border:0 !important; background:none !important; box-shadow:none !important; padding:5px 0 !important;">Video Editing</li>
+          <li style="display:list-item !important; list-style:disc !important; border:0 !important; background:none !important; box-shadow:none !important; padding:5px 0 !important;">Digital Content</li>
+          <li style="display:list-item !important; list-style:disc !important; border:0 !important; background:none !important; box-shadow:none !important; padding:5px 0 !important;">Marketing Materials</li>
+        </ul>
 
+        <span>CREATIVE & VISUAL COMMUNICATION</span>
 
-    <!-- SELECTED WORK -->
-    <section class="section work" id="work">
+      </article>
 
-      <div class="section-label">03 / SELECTED WORK</div>
 
-      <div class="section-content">
+      <!-- BUSINESS & PRODUCTIVITY PLATFORMS -->
+      <article class="service-card">
 
-        <h2>
-          Work that delivers <em>practical results.</em>
-        </h2>
+        <h3>Business & Productivity Platforms</h3>
 
-        <p class="section-intro">
-          My professional experience spans executive operations,
-          renewable energy, nonprofit development, digital technology,
-          website management, and marketing. These selected examples
-          demonstrate the range of responsibilities and contributions
-          I bring to organizations while respecting confidential
-          employer and client information.
-        </p>
+        <ul style="display:block !important; list-style:disc outside !important; padding-left:25px !important; margin:15px 0 20px !important;">
+          <li style="display:list-item !important; list-style:disc !important; border:0 !important; background:none !important; box-shadow:none !important; padding:5px 0 !important;">Google Workspace</li>
+          <li style="display:list-item !important; list-style:disc !important; border:0 !important; background:none !important; box-shadow:none !important; padding:5px 0 !important;">Google Calendar</li>
+          <li style="display:list-item !important; list-style:disc !important; border:0 !important; background:none !important; box-shadow:none !important; padding:5px 0 !important;">Microsoft Outlook</li>
+          <li style="display:list-item !important; list-style:disc !important; border:0 !important; background:none !important; box-shadow:none !important; padding:5px 0 !important;">Asana</li>
+          <li style="display:list-item !important; list-style:disc !important; border:0 !important; background:none !important; box-shadow:none !important; padding:5px 0 !important;">HubSpot</li>
+        </ul>
 
-        <div class="project-list">
+        <span>BUSINESS TOOLS</span>
 
-          <article class="project">
-            <div class="project-number">01</div>
-
-            <div>
+      </article>
 
-              <p class="project-type">
-                RENEWABLE ENERGY & CLEAN TECHNOLOGY
-              </p>
 
-              <h3>
-                Executive Operations & Cross-Functional Support
-              </h3>
+      <!-- GRANT & NONPROFIT DEVELOPMENT -->
+      <article class="service-card">
 
-              <p>
-                Support CEOs, presidents, and COOs by coordinating
-                executive schedules, meetings, stakeholder communications,
-                research, reports, and operational follow-ups. Coordinate
-                activities across business functions, maintain
-                organizational documentation, and develop materials
-                that support consistent operations and leadership priorities.
-              </p>
+        <h3>Grant & Nonprofit Development</h3>
 
-              <div class="tags">
-                <span>C-Suite Support</span>
-                <span>Executive Coordination</span>
-                <span>Project Coordination</span>
-                <span>SOP Development</span>
-                <span>Stakeholder Communications</span>
-              </div>
+        <ul style="display:block !important; list-style:disc outside !important; padding-left:25px !important; margin:15px 0 20px !important;">
+          <li style="display:list-item !important; list-style:disc !important; border:0 !important; background:none !important; box-shadow:none !important; padding:5px 0 !important;">Grant Research</li>
+          <li style="display:list-item !important; list-style:disc !important; border:0 !important; background:none !important; box-shadow:none !important; padding:5px 0 !important;">Funding Assessment</li>
+          <li style="display:list-item !important; list-style:disc !important; border:0 !important; background:none !important; box-shadow:none !important; padding:5px 0 !important;">Grant Narratives</li>
+          <li style="display:list-item !important; list-style:disc !important; border:0 !important; background:none !important; box-shadow:none !important; padding:5px 0 !important;">Proposal Writing</li>
+          <li style="display:list-item !important; list-style:disc !important; border:0 !important; background:none !important; box-shadow:none !important; padding:5px 0 !important;">Online Applications</li>
+          <li style="display:list-item !important; list-style:disc !important; border:0 !important; background:none !important; box-shadow:none !important; padding:5px 0 !important;">Submission Coordination</li>
+          <li style="display:list-item !important; list-style:disc !important; border:0 !important; background:none !important; box-shadow:none !important; padding:5px 0 !important;">Nonprofit Communications</li>
+        </ul>
 
-            </div>
+        <span>GRANT DEVELOPMENT</span>
 
-            <div class="project-arrow">↗</div>
-          </article>
+      </article>
 
+    </div>
 
-          <article class="project">
-            <div class="project-number">02</div>
+  </div>
 
-            <div>
-
-              <p class="project-type">
-                NONPROFIT & FOUNDATION DEVELOPMENT
-              </p>
-
-              <h3>
-                Funding Research & Grant Application Management
-              </h3>
-
-              <p>
-                Research and assess funding opportunities, prepare
-                grant narratives and application responses, coordinate
-                supporting documentation, and manage online application
-                and submission requirements. Support nonprofit
-                communications and website development, including
-                revitalizing an inactive website to strengthen online
-                visibility and audience engagement.
-              </p>
-
-              <div class="tags">
-                <span>Grant Research</span>
-                <span>Grant Writing</span>
-                <span>Funding Assessment</span>
-                <span>Nonprofit Administration</span>
-                <span>Website Development</span>
-              </div>
-
-            </div>
-
-            <div class="project-arrow">↗</div>
-          </article>
-
-
-          <article class="project">
-            <div class="project-number">03</div>
-
-            <div>
-
-              <p class="project-type">
-                DIGITAL SOLUTIONS & TECHNOLOGY
-              </p>
-
-              <h3>
-                Website Development & Digital Communications
-              </h3>
-
-              <p>
-                Design and maintain responsive websites, improve
-                website content and user experience, manage social
-                media channels, respond to direct messages, and
-                produce newsletters, email marketing, graphics,
-                and promotional materials. Support digital campaigns
-                and improve online business presence.
-              </p>
-
-              <div class="tags">
-                <span>HTML & CSS</span>
-                <span>WordPress & Wix</span>
-                <span>Responsive Design</span>
-                <span>Social Media</span>
-                <span>Email Marketing</span>
-              </div>
-
-            </div>
-
-            <div class="project-arrow">↗</div>
-          </article>
-
-
-          <article class="project">
-            <div class="project-number">04</div>
-
-            <div>
-
-              <p class="project-type">
-                ADMINISTRATIVE PROCESS IMPROVEMENT
-              </p>
-
-              <h3>
-                Paperless Workflows & Office Efficiency
-              </h3>
-
-              <p>
-                Organize office documentation, coordinate schedules,
-                improve administrative workflows, and reduce repetitive
-                manual tasks through paperless processes and digital
-                solutions. Contributed to improvements associated with
-                approximately 2.5 hours of administrative time saved
-                per week.
-              </p>
-
-              <div class="tags">
-                <span>Paperless Processes</span>
-                <span>Administration</span>
-                <span>Process Improvement</span>
-                <span>Digital Documentation</span>
-              </div>
-
-            </div>
-
-            <div class="project-arrow">↗</div>
-          </article>
-
-        </div>
-
-        <p class="disclaimer">
-          Project descriptions are based on my professional experience.
-          Confidential client and employer information is excluded.
-        </p>
-
-      </div>
-
-    </section>
-
-
-    <!-- ACHIEVEMENTS -->
-    <section class="section achievements" id="achievements">
-
-      <div class="section-label">04 / ACHIEVEMENTS</div>
-
-      <div class="section-content">
-
-        <h2>
-          Measuring the impact of <em>my work.</em>
-        </h2>
-
-        <p class="section-intro">
-          Selected performance improvements associated with my
-          responsibilities and contributions across previous
-          professional engagements.
-        </p>
-
-        <div class="service-grid">
-
-          <article class="service-card">
-            <div class="icon">↗</div>
-            <h3>95% Reduction</h3>
-            <p>
-              Reduction in outsourced service costs associated with
-              website management, graphic design, content creation,
-              and marketing services.
-            </p>
-            <span>RENEWABLE ENERGY & CLEAN TECHNOLOGY</span>
-          </article>
-
-          <article class="service-card">
-            <div class="icon">⌘</div>
-            <h3>85% Improvement</h3>
-            <p>
-              Improvement in grant application processing efficiency,
-              based on prior internal estimates.
-            </p>
-            <span>NONPROFIT & GRANT DEVELOPMENT</span>
-          </article>
-
-          <article class="service-card">
-            <div class="icon">↗</div>
-            <h3>40% Increase</h3>
-            <p>
-              Increase in online sales revenue associated with
-              website and digital marketing improvements.
-            </p>
-            <span>DIGITAL SOLUTIONS & TECHNOLOGY</span>
-          </article>
-
-          <article class="service-card">
-            <div class="icon">◎</div>
-            <h3>85% Increase</h3>
-            <p>
-              Increase in brand awareness associated with digital
-              marketing campaigns.
-            </p>
-            <span>DIGITAL MARKETING</span>
-          </article>
-
-          <article class="service-card">
-            <div class="icon">▦</div>
-            <h3>60% Increase</h3>
-            <p>
-              Increase in mobile and tablet website traffic
-              associated with responsive website development.
-            </p>
-            <span>WEB DEVELOPMENT</span>
-          </article>
-
-          <article class="service-card">
-            <div class="icon">✳</div>
-            <h3>2.5 Hours Saved Weekly</h3>
-            <p>
-              Reduction in manual administrative work through
-              paperless processes and workflow improvements.
-            </p>
-            <span>ADMINISTRATIVE OPERATIONS</span>
-          </article>
-
-        </div>
-
-        <p class="disclaimer">
-          Figures reflect reported organizational results and
-          internal estimates documented in my resume. They are
-          not presented as independently audited measurements.
-        </p>
-
-      </div>
-
-    </section>
-
-
-    <!-- PRINCIPLE -->
-    <section class="quote-band">
-
-      <p>
-        "I don't just support the work. I take ownership of the
-        details, improve the processes, and help turn priorities
-        into results."
-      </p>
-
-      <span>MY WORKING PRINCIPLE</span>
-
-    </section>
-
-
-    <!-- 05 / TOOLS & SKILLS -->
-    <section class="section skills" id="skills">
-
-      <div class="section-label">05 / TOOLS & SKILLS</div>
-
-      <div class="section-content">
-
-        <h2>
-          Skills, tools, and <em>capabilities.</em>
-        </h2>
-
-        <p class="section-intro">
-          A practical combination of business, administrative,
-          creative, and technical capabilities. My experience
-          allows me to move between executive support, digital
-          projects, and operational responsibilities.
-        </p>
-
-        <div class="service-grid">
-
-          <article class="service-card">
-            <h3>Executive & Business Operations</h3>
-
-            <ul style="display:block; list-style:disc outside; text-align:left; padding-left:25px; margin:15px 0 20px;">
-              <li style="display:list-item; list-style:disc; background:none; border:0; padding:5px 0;">Executive Support</li>
-              <li style="display:list-item; list-style:disc; background:none; border:0; padding:5px 0;">Calendar Management</li>
-              <li style="display:list-item; list-style:disc; background:none; border:0; padding:5px 0;">Meeting Coordination</li>
-              <li style="display:list-item; list-style:disc; background:none; border:0; padding:5px 0;">Stakeholder Communications</li>
-              <li style="display:list-item; list-style:disc; background:none; border:0; padding:5px 0;">Project Coordination</li>
-              <li style="display:list-item; list-style:disc; background:none; border:0; padding:5px 0;">SOP Development</li>
-              <li style="display:list-item; list-style:disc; background:none; border:0; padding:5px 0;">Business Administration</li>
-              <li style="display:list-item; list-style:disc; background:none; border:0; padding:5px 0;">Process Improvement</li>
-            </ul>
-
-            <span>OPERATIONS & LEADERSHIP SUPPORT</span>
-          </article>
-
-
-          <article class="service-card">
-            <h3>Web Development & Design</h3>
-
-            <ul style="display:block; list-style:disc outside; text-align:left; padding-left:25px; margin:15px 0 20px;">
-              <li style="display:list-item; list-style:disc; background:none; border:0; padding:5px 0;">HTML</li>
-              <li style="display:list-item; list-style:disc; background:none; border:0; padding:5px 0;">CSS</li>
-              <li style="display:list-item; list-style:disc; background:none; border:0; padding:5px 0;">WordPress</li>
-              <li style="display:list-item; list-style:disc; background:none; border:0; padding:5px 0;">Wix</li>
-              <li style="display:list-item; list-style:disc; background:none; border:0; padding:5px 0;">Shopify</li>
-              <li style="display:list-item; list-style:disc; background:none; border:0; padding:5px 0;">GoDaddy</li>
-              <li style="display:list-item; list-style:disc; background:none; border:0; padding:5px 0;">Responsive Websites</li>
-              <li style="display:list-item; list-style:disc; background:none; border:0; padding:5px 0;">UX & Content Review</li>
-            </ul>
-
-            <span>WEB TECHNOLOGY</span>
-          </article>
-
-
-          <article class="service-card">
-            <h3>AI & Digital Productivity</h3>
-
-            <ul style="display:block; list-style:disc outside; text-align:left; padding-left:25px; margin:15px 0 20px;">
-              <li style="display:list-item; list-style:disc; background:none; border:0; padding:5px 0;">AI-Assisted Research</li>
-              <li style="display:list-item; list-style:disc; background:none; border:0; padding:5px 0;">AI Content Development</li>
-              <li style="display:list-item; list-style:disc; background:none; border:0; padding:5px 0;">Documentation</li>
-              <li style="display:list-item; list-style:disc; background:none; border:0; padding:5px 0;">Workflow Support</li>
-              <li style="display:list-item; list-style:disc; background:none; border:0; padding:5px 0;">Process Optimization</li>
-              <li style="display:list-item; list-style:disc; background:none; border:0; padding:5px 0;">Digital Solutions</li>
-            </ul>
-
-            <span>AI-ENABLED WORKFLOWS</span>
-          </article>
-
-
-          <article class="service-card">
-            <h3>Digital Marketing & Communications</h3>
-
-            <ul style="display:block; list-style:disc outside; text-align:left; padding-left:25px; margin:15px 0 20px;">
-              <li style="display:list-item; list-style:disc; background:none; border:0; padding:5px 0;">Social Media Management</li>
-              <li style="display:list-item; list-style:disc; background:none; border:0; padding:5px 0;">Email Marketing</li>
-              <li style="display:list-item; list-style:disc; background:none; border:0; padding:5px 0;">Newsletters</li>
-              <li style="display:list-item; list-style:disc; background:none; border:0; padding:5px 0;">SEO</li>
-              <li style="display:list-item; list-style:disc; background:none; border:0; padding:5px 0;">Content Strategy</li>
-              <li style="display:list-item; list-style:disc; background:none; border:0; padding:5px 0;">Audience Engagement</li>
-              <li style="display:list-item; list-style:disc; background:none; border:0; padding:5px 0;">Campaign Analytics</li>
-            </ul>
-
-            <span>MARKETING & COMMUNICATIONS</span>
-          </article>
-
-
-          <article class="service-card">
-            <h3>Creative Production</h3>
-
-            <ul style="display:block; list-style:disc outside; text-align:left; padding-left:25px; margin:15px 0 20px;">
-              <li style="display:list-item; list-style:disc; background:none; border:0; padding:5px 0;">Canva</li>
-              <li style="display:list-item; list-style:disc; background:none; border:0; padding:5px 0;">GIMP</li>
-              <li style="display:list-item; list-style:disc; background:none; border:0; padding:5px 0;">iMovie</li>
-              <li style="display:list-item; list-style:disc; background:none; border:0; padding:5px 0;">Graphic Design</li>
-              <li style="display:list-item; list-style:disc; background:none; border:0; padding:5px 0;">Video Editing</li>
-              <li style="display:list-item; list-style:disc; background:none; border:0; padding:5px 0;">Digital Content</li>
-              <li style="display:list-item; list-style:disc; background:none; border:0; padding:5px 0;">Marketing Materials</li>
-            </ul>
-
-            <span>CREATIVE & VISUAL COMMUNICATION</span>
-          </article>
-
-
-          <article class="service-card">
-            <h3>Business & Productivity Platforms</h3>
-
-            <ul style="display:block; list-style:disc outside; text-align:left; padding-left:25px; margin:15px 0 20px;">
-              <li style="display:list-item; list-style:disc; background:none; border:0; padding:5px 0;">Google Workspace</li>
-              <li style="display:list-item; list-style:disc; background:none; border:0; padding:5px 0;">Google Calendar</li>
-              <li style="display:list-item; list-style:disc; background:none; border:0; padding:5px 0;">Microsoft Outlook</li>
-              <li style="display:list-item; list-style:disc; background:none; border:0; padding:5px 0;">Asana</li>
-              <li style="display:list-item; list-style:disc; background:none; border:0; padding:5px 0;">HubSpot</li>
-            </ul>
-
-            <span>BUSINESS TOOLS</span>
-          </article>
-
-
-          <article class="service-card">
-            <h3>Grant & Nonprofit Development</h3>
-
-            <ul style="display:block; list-style:disc outside; text-align:left; padding-left:25px; margin:15px 0 20px;">
-              <li style="display:list-item; list-style:disc; background:none; border:0; padding:5px 0;">Grant Research</li>
-              <li style="display:list-item; list-style:disc; background:none; border:0; padding:5px 0;">Funding Assessment</li>
-              <li style="display:list-item; list-style:disc; background:none; border:0; padding:5px 0;">Grant Narratives</li>
-              <li style="display:list-item; list-style:disc; background:none; border:0; padding:5px 0;">Proposal Writing</li>
-              <li style="display:list-item; list-style:disc; background:none; border:0; padding:5px 0;">Online Applications</li>
-              <li style="display:list-item; list-style:disc; background:none; border:0; padding:5px 0;">Submission Coordination</li>
-              <li style="display:list-item; list-style:disc; background:none; border:0; padding:5px 0;">Nonprofit Communications</li>
-            </ul>
-
-            <span>GRANT DEVELOPMENT</span>
-          </article>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- EDUCATION -->
-    <section class="section education" id="education">
-
-      <div class="section-label">06 / EDUCATION</div>
-
-      <div class="section-content">
-
-        <h2>
-          Academic <em>background.</em>
-        </h2>
-
-        <h3>
-          Bachelor of Arts, Major in English
-        </h3>
-
-        <p>
-          Jose Rizal University
-        </p>
-
-      </div>
-
-    </section>
-
-
-    <!-- CONTACT -->
-    <section class="section contact" id="contact">
-
-      <div class="section-label">07 / CONTACT</div>
-
-      <div class="section-content">
-
-        <h2>
-          Let's make better work <em>happen.</em>
-        </h2>
-
-        <p class="section-intro">
-          I welcome opportunities involving executive operations,
-          business administration, digital strategy, AI-enabled
-          productivity, grant and nonprofit development, website
-          management, and digital solutions.
-
-          If your organization needs someone who can manage multiple
-          responsibilities, coordinate priorities, solve problems,
-          and independently execute projects, let's connect.
-        </p>
-
-        <div class="contact-actions">
-
-          <a
-            class="button primary"
-            href="https://www.linkedin.com/"
-            target="_blank"
-            rel="noopener noreferrer">
-            Connect on LinkedIn <span>↗</span>
-          </a>
-
-          <a
-            class="button secondary"
-            href="mailto:leth.liwanag.work@gmail.com?subject=Professional%20Inquiry">
-            Email me
-          </a>
-
-        </div>
-
-        <p class="small-note">
-          Email:
-          <a href="mailto:leth.liwanag.work@gmail.com">
-            leth.liwanag.work@gmail.com
-          </a>
-        </p>
-
-        <p class="small-note">
-          Phone:
-          <a href="tel:+6615199231">+661 519 9231</a>
-        </p>
-
-        <p class="small-note">
-          Replace the LinkedIn button URL with your actual profile link
-          before sharing your portfolio with recruiters.
-        </p>
-
-      </div>
-
-    </section>
-
-  </main>
-
-
-  <!-- FOOTER -->
-  <footer>
-
-    <a class="brand" href="#home">
-      LETH<span>.</span>
-    </a>
-
-    <span>
-      © <span id="year"></span> Leth Liwanag. Built with purpose.
-    </span>
-
-    <a href="#home">
-      Back to top ↑
-    </a>
-
-  </footer>
-
-
-  <!-- LOCAL WEBSITE JAVASCRIPT ONLY -->
-  <script src="script.js"></script>
-
-</body>
-</html>
+</section>
