@@ -609,3 +609,34 @@ footer > a:last-child:hover {
         min-height: 0;
     }
 }
+/* MOBILE FOOTER ALIGNMENT */
+@media (max-width: 650px) {
+  footer {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    width: 100% !important;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    box-sizing: border-box !important;
+  }
+
+  footer .brand {
+    display: block;
+    text-align: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  footer > div {
+    width: 100% !important;
+    text-align: center !important;
+  }
+
+  footer > div > div {
+    text-align: center !important;
+    overflow-wrap: anywhere;
+  }
+}
