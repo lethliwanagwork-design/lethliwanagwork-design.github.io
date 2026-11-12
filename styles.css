@@ -131,13 +131,16 @@ h1 em, h2 em {
 }
 
 .hero-actions {
-  display: flex;
-  justify-content: center !important;
-  align-items: center;
-  gap: 16px;
-  flex-wrap: wrap;
-  margin-top: 32px;
-  width: 100%;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-top: 32px;
+    width: 100%;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .contact-actions {
