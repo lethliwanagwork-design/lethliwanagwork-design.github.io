@@ -133,6 +133,7 @@ h1 em, h2 em {
 .hero-actions,
 .contact-actions {
   display: flex;
+  justify-content: center;
   gap: 16px;
   flex-wrap: wrap;
   margin-top: 32px;
