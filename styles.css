@@ -132,15 +132,12 @@ h1 em, h2 em {
 
 .hero-actions {
     display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
+    justify-content: flex-start !important;
+    align-items: center;
     flex-wrap: wrap;
     gap: 16px;
     margin-top: 32px;
     width: 100%;
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
 }
 
 .contact-actions {
