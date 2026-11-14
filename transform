@@ -911,7 +911,7 @@ footer > a:last-child:hover {
         box-shadow: none !important;
         background: transparent !important;
         filter: none !important;
-        transform: scale(1.35) !important;
+        transform: none !important;
     }
 
     .hero-portrait::before,
