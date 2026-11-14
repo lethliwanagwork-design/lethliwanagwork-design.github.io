@@ -193,7 +193,7 @@ h1 em, h2 em {
   margin-right: 9px;
 }
 
-.hero-portrait {
+. {
   width: 100%;
   max-width: 480px;
   justify-self: end;
@@ -870,7 +870,7 @@ footer > a:last-child:hover {
         right: 0 !important;
         bottom: 0 !important;
 
-        width: 58% !important;
+        width: 80% !important;
         height: auto !important;
         max-width: none !important;
         min-height: 0 !important;
