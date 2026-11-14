@@ -1172,7 +1172,6 @@ footer > a:last-child:hover {
         overflow-wrap: break-word !important;
     }
 }
-/* MATCH FIRST PARAGRAPH SIZE WITH SECOND PARAGRAPH */
-.section-content p.section-intro {
+#about .section-content p.section-intro {
     font-size: 14px !important;
 }
