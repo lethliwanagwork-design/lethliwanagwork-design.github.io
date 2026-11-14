@@ -205,108 +205,14 @@
 
       .quote-band {
         text-align: center;
+      .quote-band {
+        text-align: center;
       }
     }
 
     .hero-portrait::before,
     .hero-portrait::after {
         transform: translateY(-100px);
-    }
-
-    /* HERO DESKTOP: text on the left, portrait on the right */
-    @media screen and (min-width: 769px) {
-      .hero {
-        display: grid !important;
-        grid-template-columns: minmax(0, 1.2fr) minmax(320px, 0.8fr) !important;
-        align-items: center !important;
-        justify-items: stretch !important;
-        column-gap: 60px !important;
-      }
-
-      .hero-copy {
-        grid-column: 1 !important;
-        grid-row: 1 !important;
-        width: 100% !important;
-        min-width: 0 !important;
-        margin: 0 !important;
-        text-align: center !important;
-      }
-
-      .hero-portrait {
-        grid-column: 2 !important;
-        grid-row: 1 !important;
-        display: block !important;
-        width: 100% !important;
-        max-width: 480px !important;
-        justify-self: end !important;
-        align-self: center !important;
-        margin: 0 !important;
-      }
-
-      .hero-portrait img {
-        display: block !important;
-        width: 100% !important;
-        max-width: 480px !important;
-        height: 510px !important;
-        object-fit: cover !important;
-        object-position: center top !important;
-        margin: 0 auto !important;
-      }
-
-      .hero-copy .lead {
-        max-width: 680px !important;
-        margin: 0 auto !important;
-      }
-
-      .hero-copy .lead p {
-        margin: 0 auto 24px !important;
-        line-height: 1.9 !important;
-        text-align: center !important;
-      }
-
-      .hero-copy .lead p:last-child {
-        margin-bottom: 0 !important;
-      }
-
-      .hero-actions {
-        justify-content: center !important;
-      }
-    }
-
-    /* MOBILE: stack text and portrait */
-    @media screen and (max-width: 768px) {
-      .hero {
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important;
-        gap: 40px !important;
-      }
-
-      .hero-copy,
-      .hero-portrait {
-        width: 100% !important;
-        max-width: 100% !important;
-        margin-left: auto !important;
-        margin-right: auto !important;
-      }
-
-      .hero-portrait {
-        max-width: 340px !important;
-      }
-
-      .hero-portrait img {
-        display: block !important;
-        width: 100% !important;
-        max-width: 100% !important;
-        height: auto !important;
-        object-fit: cover !important;
-        margin: 0 auto !important;
-      }
-
-      .hero-copy .lead p {
-        margin-bottom: 22px !important;
-        line-height: 1.8 !important;
-      }
     }
   </style>
 </head>
@@ -351,12 +257,12 @@
 </h1>
 
         <div class="lead">
-          <p>C-Suite Executive Operations and AI & Digital Solutions Specialist with over five years of professional experience providing strategic and operational support to a CEO and founder, a Goldman Sachs alumnus.</p>
+         <p>C-Suite Executive Operations and AI & Digital Solutions Specialist with over five years of professional experience providing strategic and operational support to a CEO and founder, a Goldman Sachs alumnus.<p>
 
-          <p>Expertise spans executive operations, AI-powered business solutions, digital transformation, business process optimization, web development, digital marketing, and grant development. Skilled in developing organizational systems, SOPs, company handbooks, and internal documentation to strengthen operational efficiency and support strategic objectives.</p>
+<p>Expertise spans executive operations, AI-powered business solutions, digital transformation, business process optimization, web development, digital marketing, and grant development. Skilled in developing organizational systems, SOPs, company handbooks, and internal documentation to strengthen operational efficiency and support strategic objectives.<p>
 
-          <p>Combines executive-level support, technical expertise, strategic thinking, and hands-on execution to streamline operations, improve business processes, and translate leadership priorities into measurable results.</p>
-        </div>
+<p>Combines executive-level support, technical expertise, strategic thinking, and hands-on execution to streamline operations, improve business processes, and translate leadership priorities into measurable results.<p>
+        </p>
 
         <div class="hero-actions">
           <a class="button primary" href="#work">
@@ -375,10 +281,14 @@
 
       </div>
 
-      <div class="hero-portrait">
-        <img
-          src="./assets/leth-liwanag-portrait-transparent.png"
-          alt="Professional portrait of Leth Liwanag">
+      <div class="hero-portrait"
+     aria-label="Portrait of Leth Liwanag"
+     style="display: flex; justify-content: center; align-items: center; width: 100%;">
+
+  <img
+    src="assets/leth-liwanag-portrait.png"
+    alt="Professional portrait of Leth Liwanag"
+    style="width: 150%; max-width: none; height: auto; display: block; margin: auto;">
       </div>
 
     </section>
@@ -882,7 +792,6 @@
     </section>
 
 
-   
 <!-- 05 / TOOLS & SKILLS -->
 <section class="section skills" id="skills">
 
