@@ -911,7 +911,47 @@ footer > a:last-child:hover {
     }
 }
 
+/* ==========================================
+   MOBILE HERO PORTRAIT — INCREASE SIZE
+   Keep entire portrait visible, no cropping
+   ========================================== */
 
+@media screen and (max-width: 768px) {
+
+    .hero-portrait {
+        display: flex !important;
+        justify-content: center !important;
+        align-items: flex-end !important;
+
+        width: 115% !important;
+        max-width: none !important;
+        height: auto !important;
+
+        margin-left: auto !important;
+        margin-right: auto !important;
+
+        overflow: visible !important;
+        background: transparent !important;
+    }
+
+    .hero-portrait img {
+        display: block !important;
+
+        width: 100% !important;
+        height: auto !important;
+
+        max-width: 100% !important;
+        max-height: none !important;
+
+        object-fit: contain !important;
+        object-position: center bottom !important;
+
+        margin: 0 auto !important;
+
+        transform: none !important;
+        filter: none !important;
+    }
+}
 /* =====================================================
    TABLET AND MOBILE â€” FULL PORTRAIT
    ===================================================== */
