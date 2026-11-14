@@ -892,35 +892,23 @@ footer > a:last-child:hover {
         pointer-events: none !important;
     }
 
-    .hero-portrait img {
-        display: block !important;
-
-        width: 100% !important;
-        height: 100% !important;
-
-        max-width: none !important;
-        max-height: none !important;
-
-        flex: 1 1 auto !important;
-        min-width: 0 !important;
-        min-height: 0 !important;
-
-        object-fit: contain !important;
-        object-position: center bottom !important;
-
-        margin: 0 !important;
-        padding: 0 !important;
-
-        border: none !important;
-        border-radius: 0 !important;
-        outline: none !important;
-        box-shadow: none !important;
-
-        background: transparent !important;
-        filter: none !important;
-
-        transform: scale(1.20) !important;
-        transform-origin: center bottom !important;
+   .hero-portrait img {
+    display: block !important;
+    width: auto !important;
+    height: 100% !important;
+    max-width: 100% !important;
+    max-height: 100% !important;
+    object-fit: contain !important;
+    object-position: center bottom !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    background: transparent !important;
+    filter: none !important;
+    transform: none !important;
+}
     }
 
     .hero-portrait::before,
