@@ -785,56 +785,73 @@ footer > a:last-child:hover {
     }
 
 }
-/* =====================================================
-   HERO SECTION â€” CENTERED INTRO + OVERSIZED PORTRAIT
-   Desktop: text on left, portrait integrated on right
-   Mobile: text first, portrait below
-   ===================================================== */
 
+/* =========================================================
+   HERO SECTION — EXECUTIVE EDITORIAL DESIGN
+   Desktop: Centered introduction left, oversized portrait right
+   Mobile: Stacked responsive layout
+   ========================================================= */
+
+/* DESKTOP HERO */
 @media screen and (min-width: 769px) {
+
     .hero {
         position: relative !important;
         display: grid !important;
-        grid-template-columns: minmax(0, 58%) minmax(0, 42%) !important;
+        grid-template-columns: 56% 44% !important;
         align-items: center !important;
         justify-items: stretch !important;
         gap: 0 !important;
+
         min-height: 900px !important;
-        padding: 90px 8% 0 !important;
+        padding: 75px 7% 0 !important;
+
         overflow: hidden !important;
         isolation: isolate !important;
+        background: var(--bg) !important;
     }
+
+    /* LEFT COLUMN — INTRODUCTION */
 
     .hero-copy {
         grid-column: 1 !important;
         grid-row: 1 !important;
+
         position: relative !important;
-        z-index: 2 !important;
+        z-index: 3 !important;
+
         width: 100% !important;
-        min-width: 0 !important;
         max-width: 760px !important;
+        min-width: 0 !important;
+
         margin: 0 auto !important;
+        padding: 0 !important;
+
         align-self: center !important;
         text-align: center !important;
     }
 
+    .hero-copy h1,
     .hero-copy .hero-title {
-        display: block !important;
         width: 100% !important;
+        margin: 0 auto 28px !important;
         text-align: center !important;
-        margin-left: auto !important;
-        margin-right: auto !important;
     }
 
+    .hero-copy h1 em,
     .hero-copy .hero-title em {
-        display: inline !important;
+        color: var(--accent) !important;
     }
+
+    /* THREE-PARAGRAPH INTRODUCTION */
 
     .hero-copy .lead {
         width: 100% !important;
-        max-width: 700px !important;
+        max-width: 680px !important;
         margin: 0 auto !important;
         text-align: center !important;
+        font-size: 16px !important;
+        line-height: 1.9 !important;
     }
 
     .hero-copy .lead p {
@@ -847,61 +864,79 @@ footer > a:last-child:hover {
         margin-bottom: 0 !important;
     }
 
+    /* CENTERED BUTTONS */
+
     .hero-actions {
         display: flex !important;
         justify-content: center !important;
         align-items: center !important;
         flex-wrap: wrap !important;
+        gap: 16px !important;
+        margin-top: 32px !important;
     }
 
     .hero-note {
         text-align: center !important;
+        margin-top: 30px !important;
     }
 
-    /* The portrait is positioned independently so it can grow
-       beyond its grid column and visually join the hero background. */
+    /* RIGHT COLUMN — LARGE INTEGRATED PORTRAIT */
+
     .hero-portrait {
         position: absolute !important;
-        right: -4% !important;
+
+        top: 0 !important;
+        right: 0 !important;
         bottom: 0 !important;
-        z-index: 1 !important;
-        grid-column: auto !important;
-        grid-row: auto !important;
+
+        z-index: 2 !important;
+
+        width: 49% !important;
+        height: 100% !important;
+        max-width: none !important;
+        min-height: 0 !important;
+
         display: flex !important;
         justify-content: flex-end !important;
         align-items: flex-end !important;
-        width: 55% !important;
-        height: 100% !important;
-        min-height: 0 !important;
-        max-width: none !important;
+
         margin: 0 !important;
         padding: 0 !important;
-        overflow: visible !important;
+
         background: transparent !important;
-        border: 0 !important;
+        border: none !important;
         border-radius: 0 !important;
         box-shadow: none !important;
+
+        overflow: visible !important;
         pointer-events: none !important;
     }
 
     .hero-portrait img {
         display: block !important;
+
         width: auto !important;
-        height: 112% !important;
+        height: 108% !important;
+
         max-width: none !important;
         max-height: none !important;
+
+        flex: 0 0 auto !important;
+
         object-fit: contain !important;
         object-position: right bottom !important;
+
         margin: 0 !important;
         padding: 0 !important;
-        border: 0 !important;
+
+        border: none !important;
         border-radius: 0 !important;
-        outline: 0 !important;
+        outline: none !important;
         box-shadow: none !important;
+
         background: transparent !important;
         filter: none !important;
-        transform: scale(1.08) !important;
-        transform-origin: right bottom !important;
+        transform: none !important;
     }
 
     .hero-portrait::before,
@@ -911,31 +946,38 @@ footer > a:last-child:hover {
     }
 }
 
-/* TABLET AND MOBILE â€” preserve readable text and stack portrait */
+/* TABLET AND MOBILE */
+
 @media screen and (max-width: 768px) {
+
     .hero {
         position: relative !important;
         display: flex !important;
         flex-direction: column !important;
         align-items: center !important;
-        justify-items: stretch !important;
-        gap: 35px !important;
+
+        width: 100% !important;
         min-height: auto !important;
+
         padding: 65px 7% 0 !important;
+        gap: 30px !important;
+
         overflow: hidden !important;
+        background: var(--bg) !important;
     }
 
     .hero-copy {
         position: relative !important;
         z-index: 2 !important;
-        grid-column: auto !important;
-        grid-row: auto !important;
+
         width: 100% !important;
         max-width: 100% !important;
+
         margin: 0 auto !important;
         text-align: center !important;
     }
 
+    .hero-copy h1,
     .hero-copy .hero-title,
     .hero-copy .lead,
     .hero-copy .lead p {
@@ -950,43 +992,60 @@ footer > a:last-child:hover {
         justify-content: center !important;
     }
 
+    .hero-note {
+        text-align: center !important;
+    }
+
     .hero-portrait {
         position: relative !important;
+
+        top: auto !important;
         right: auto !important;
         bottom: auto !important;
+
         z-index: 1 !important;
+
         display: flex !important;
         justify-content: center !important;
         align-items: flex-end !important;
-        grid-column: auto !important;
-        grid-row: auto !important;
+
         width: 100% !important;
         max-width: 480px !important;
         height: auto !important;
         min-height: 0 !important;
+
         margin: 0 auto !important;
         padding: 0 !important;
-        overflow: hidden !important;
+
         background: transparent !important;
-        border: 0 !important;
+        border: none !important;
         border-radius: 0 !important;
         box-shadow: none !important;
+
+        overflow: hidden !important;
     }
 
     .hero-portrait img {
         display: block !important;
+
         width: 100% !important;
         height: auto !important;
+
         max-width: 100% !important;
         max-height: none !important;
+
         object-fit: contain !important;
         object-position: center bottom !important;
+
         margin: 0 !important;
         padding: 0 !important;
-        border: 0 !important;
+
+        border: none !important;
         border-radius: 0 !important;
         box-shadow: none !important;
+
         background: transparent !important;
+        filter: none !important;
         transform: none !important;
     }
 }
