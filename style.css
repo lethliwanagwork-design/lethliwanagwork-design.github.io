@@ -1174,4 +1174,5 @@ footer > a:last-child:hover {
 }
 #about .section-content p.section-intro {
     font-size: 14px !important;
+    color: var(--muted) !important;
 }
