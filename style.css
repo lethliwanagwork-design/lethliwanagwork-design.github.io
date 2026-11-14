@@ -572,7 +572,7 @@ footer > a:last-child:hover {
     transition-duration: .01ms !important;
   }
 }
-/* TOOLS & SKILLS Ã¢â‚¬â€ Equal-sized cards */
+/* TOOLS & SKILLS ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â Equal-sized cards */
 .skills .service-grid {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -787,7 +787,7 @@ footer > a:last-child:hover {
 }
 
 /* =====================================================
-   HERO SECTION â€” FULLY VISIBLE TRANSPARENT PORTRAIT
+   HERO SECTION Ã¢â‚¬â€ FULLY VISIBLE TRANSPARENT PORTRAIT
    Desktop: text on left, complete portrait on right
    Mobile: text first, complete portrait below
    ===================================================== */
@@ -882,7 +882,7 @@ footer > a:last-child:hover {
         pointer-events: none !important;
     }
 
-    /* SHOW THE ENTIRE PORTRAIT â€” NO CROPPING */
+    /* SHOW THE ENTIRE PORTRAIT Ã¢â‚¬â€ NO CROPPING */
 
     .hero-portrait img {
         display: block !important;
@@ -912,7 +912,7 @@ footer > a:last-child:hover {
 }
 
 /* ==========================================
-   MOBILE HERO — PORTRAIT TO BOTTOM EDGE
+   MOBILE HERO â€” PORTRAIT TO BOTTOM EDGE
    Full width, no empty gap below portrait
    ========================================== */
 
@@ -966,7 +966,7 @@ footer > a:last-child:hover {
         transform: none !important;
     }
 }
-/* WELCOME TO MY PORTFOLIO — SMALL INTRODUCTION */
+/* WELCOME TO MY PORTFOLIO â€” SMALL INTRODUCTION */
 
 .hero-copy .hero-title .hero-intro {
     display: block !important;
@@ -991,7 +991,7 @@ footer > a:last-child:hover {
 }
 
 /* ==========================================
-   03 / SELECTED WORK — EQUAL SIZE TAG BOXES
+   03 / SELECTED WORK â€” EQUAL SIZE TAG BOXES
    ========================================== */
 
 .project-list .tags {
@@ -1042,7 +1042,7 @@ footer > a:last-child:hover {
 }
 
 /* ==========================================
-   03 / SELECTED WORK — EQUAL-SIZE TAG BOXES
+   03 / SELECTED WORK â€” EQUAL-SIZE TAG BOXES
    Desktop and Mobile
    ========================================== */
 
@@ -1093,7 +1093,7 @@ footer > a:last-child:hover {
 }
 
 /* ==========================================
-   SELECTED WORK — MOBILE ONLY
+   SELECTED WORK â€” MOBILE ONLY
    ONE BOX PER ROW, ALL EQUAL SIZE
    ========================================== */
 
@@ -1123,6 +1123,50 @@ footer > a:last-child:hover {
         box-sizing: border-box !important;
         padding: 10px 14px !important;
 
+        text-align: center !important;
+        white-space: normal !important;
+        overflow-wrap: break-word !important;
+    }
+}
+
+
+/* =====================================================
+   FINAL MOBILE FIX â€” SELECTED WORK TAG BOXES
+   One full-width box per row on mobile only.
+   Desktop and tablet layouts remain unchanged.
+   ===================================================== */
+
+@media screen and (max-width: 650px) {
+    .project-list .tags,
+    .project .tags {
+        display: grid !important;
+        grid-template-columns: minmax(0, 1fr) !important;
+        grid-auto-flow: row !important;
+        grid-auto-rows: 64px !important;
+        align-items: stretch !important;
+        justify-items: stretch !important;
+        gap: 12px !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        box-sizing: border-box !important;
+    }
+
+    .project-list .tags > span,
+    .project .tags > span {
+        display: flex !important;
+        flex: none !important;
+        width: 100% !important;
+        min-width: 0 !important;
+        max-width: 100% !important;
+        height: 64px !important;
+        min-height: 64px !important;
+        margin: 0 !important;
+        padding: 10px 14px !important;
+        box-sizing: border-box !important;
+        align-items: center !important;
+        justify-content: center !important;
         text-align: center !important;
         white-space: normal !important;
         overflow-wrap: break-word !important;
