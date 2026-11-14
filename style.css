@@ -785,13 +785,15 @@ footer > a:last-child:hover {
     }
 
 }
+
 /* =====================================================
-   HERO SECTION â€” CENTERED INTRO + OVERSIZED PORTRAIT
-   Desktop: text on left, portrait integrated on right
-   Mobile: text first, portrait below
+   HERO SECTION — FULLY VISIBLE TRANSPARENT PORTRAIT
+   Desktop: text on left, complete portrait on right
+   Mobile: text first, complete portrait below
    ===================================================== */
 
 @media screen and (min-width: 769px) {
+
     .hero {
         position: relative !important;
         display: grid !important;
@@ -858,21 +860,18 @@ footer > a:last-child:hover {
         text-align: center !important;
     }
 
-    /* The portrait is positioned independently so it can grow
-       beyond its grid column and visually join the hero background. */
+    /* PORTRAIT CONTAINER */
+
     .hero-portrait {
         position: absolute !important;
-        right: -4% !important;
+        right: 0 !important;
         bottom: 0 !important;
         z-index: 1 !important;
-        grid-column: auto !important;
-        grid-row: auto !important;
         display: flex !important;
-        justify-content: flex-end !important;
+        justify-content: center !important;
         align-items: flex-end !important;
-        width: 55% !important;
+        width: 45% !important;
         height: 100% !important;
-        min-height: 0 !important;
         max-width: none !important;
         margin: 0 !important;
         padding: 0 !important;
@@ -884,24 +883,26 @@ footer > a:last-child:hover {
         pointer-events: none !important;
     }
 
+    /* SHOW THE ENTIRE PORTRAIT — NO CROPPING */
+
     .hero-portrait img {
         display: block !important;
         width: auto !important;
-        height: 112% !important;
-        max-width: none !important;
-        max-height: none !important;
+        height: 100% !important;
+        max-width: 100% !important;
+        max-height: 100% !important;
         object-fit: contain !important;
-        object-position: right bottom !important;
-        margin: 0 !important;
+        object-position: center bottom !important;
+        margin: 0 auto !important;
         padding: 0 !important;
         border: 0 !important;
         border-radius: 0 !important;
-        outline: 0 !important;
+        outline: none !important;
         box-shadow: none !important;
         background: transparent !important;
         filter: none !important;
-        transform: scale(1.08) !important;
-        transform-origin: right bottom !important;
+        transform: none !important;
+        transform-origin: center bottom !important;
     }
 
     .hero-portrait::before,
@@ -911,8 +912,13 @@ footer > a:last-child:hover {
     }
 }
 
-/* TABLET AND MOBILE â€” preserve readable text and stack portrait */
+
+/* =====================================================
+   TABLET AND MOBILE — FULL PORTRAIT
+   ===================================================== */
+
 @media screen and (max-width: 768px) {
+
     .hero {
         position: relative !important;
         display: flex !important;
@@ -928,8 +934,6 @@ footer > a:last-child:hover {
     .hero-copy {
         position: relative !important;
         z-index: 2 !important;
-        grid-column: auto !important;
-        grid-row: auto !important;
         width: 100% !important;
         max-width: 100% !important;
         margin: 0 auto !important;
@@ -958,15 +962,13 @@ footer > a:last-child:hover {
         display: flex !important;
         justify-content: center !important;
         align-items: flex-end !important;
-        grid-column: auto !important;
-        grid-row: auto !important;
         width: 100% !important;
         max-width: 480px !important;
         height: auto !important;
         min-height: 0 !important;
         margin: 0 auto !important;
         padding: 0 !important;
-        overflow: hidden !important;
+        overflow: visible !important;
         background: transparent !important;
         border: 0 !important;
         border-radius: 0 !important;
@@ -975,13 +977,13 @@ footer > a:last-child:hover {
 
     .hero-portrait img {
         display: block !important;
-        width: 100% !important;
+        width: auto !important;
         height: auto !important;
         max-width: 100% !important;
         max-height: none !important;
         object-fit: contain !important;
         object-position: center bottom !important;
-        margin: 0 !important;
+        margin: 0 auto !important;
         padding: 0 !important;
         border: 0 !important;
         border-radius: 0 !important;
