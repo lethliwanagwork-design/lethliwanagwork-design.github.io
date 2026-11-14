@@ -572,7 +572,7 @@ footer > a:last-child:hover {
     transition-duration: .01ms !important;
   }
 }
-/* TOOLS & SKILLS â€” Equal-sized cards */
+/* TOOLS & SKILLS Ã¢â‚¬â€ Equal-sized cards */
 .skills .service-grid {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -787,7 +787,7 @@ footer > a:last-child:hover {
 }
 
 /* =====================================================
-   HERO SECTION — FULLY VISIBLE TRANSPARENT PORTRAIT
+   HERO SECTION â€” FULLY VISIBLE TRANSPARENT PORTRAIT
    Desktop: text on left, complete portrait on right
    Mobile: text first, complete portrait below
    ===================================================== */
@@ -882,7 +882,7 @@ footer > a:last-child:hover {
         pointer-events: none !important;
     }
 
-    /* SHOW THE ENTIRE PORTRAIT — NO CROPPING */
+    /* SHOW THE ENTIRE PORTRAIT â€” NO CROPPING */
 
     .hero-portrait img {
         display: block !important;
@@ -913,7 +913,7 @@ footer > a:last-child:hover {
 
 
 /* =====================================================
-   TABLET AND MOBILE — FULL PORTRAIT
+   TABLET AND MOBILE â€” FULL PORTRAIT
    ===================================================== */
 
 @media screen and (max-width: 768px) {
@@ -989,5 +989,45 @@ footer > a:last-child:hover {
         box-shadow: none !important;
         background: transparent !important;
         transform: none !important;
+    }
+}
+
+
+/* =====================================================
+   HERO INTRO LABEL â€” SMALL TEXT ABOVE MAIN HEADLINE
+   Requires the intro words to be wrapped in:
+   <span class="hero-intro">Welcome to my Portfolio:</span>
+   ===================================================== */
+
+.hero-copy .hero-title {
+    text-align: center !important;
+    width: 100% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+.hero-copy .hero-title .hero-intro {
+    display: block !important;
+    width: 100% !important;
+    margin: 0 auto 18px !important;
+    color: var(--accent) !important;
+    font-family: var(--font) !important;
+    font-size: 15px !important;
+    font-weight: 600 !important;
+    font-style: normal !important;
+    letter-spacing: 2px !important;
+    line-height: 1.5 !important;
+    text-align: center !important;
+}
+
+.hero-copy .hero-title em {
+    display: inline !important;
+}
+
+@media screen and (max-width: 768px) {
+    .hero-copy .hero-title .hero-intro {
+        font-size: 13px !important;
+        letter-spacing: 1.5px !important;
+        margin-bottom: 14px !important;
     }
 }
