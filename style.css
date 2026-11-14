@@ -821,11 +821,10 @@ footer > a:last-child:hover {
     }
 
     .hero-copy .hero-title {
-        display: block !important;
-        width: 100% !important;
-        text-align: center !important;
-        margin-left: auto !important;
-        margin-right: auto !important;
+    text-align: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    width: 100% !important;
     }
 
     .hero-copy .hero-title em {
