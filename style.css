@@ -911,9 +911,10 @@ footer > a:last-child:hover {
     }
 }
 
+
 /* ==========================================
-   MOBILE HERO PORTRAIT — INCREASE SIZE
-   Keep entire portrait visible, no cropping
+   MOBILE PORTRAIT — SIGNIFICANTLY LARGER
+   Preserve full portrait; do not crop the head
    ========================================== */
 
 @media screen and (max-width: 768px) {
@@ -923,151 +924,35 @@ footer > a:last-child:hover {
         justify-content: center !important;
         align-items: flex-end !important;
 
-        width: 115% !important;
+        position: relative !important;
+        width: 100vw !important;
+        max-width: none !important;
+        min-width: 0 !important;
+        height: auto !important;
+
+        margin-left: calc(50% - 50vw) !important;
+        margin-right: calc(50% - 50vw) !important;
+
+        padding: 0 !important;
+        overflow: visible !important;
+        background: transparent !important;
+    }
+
+    .hero-portrait img {
+        display: block !important;
+
+        width: 125vw !important;
         max-width: none !important;
         height: auto !important;
-
-        margin-left: auto !important;
-        margin-right: auto !important;
-
-        overflow: visible !important;
-        background: transparent !important;
-    }
-
-    .hero-portrait img {
-        display: block !important;
-
-        width: 100% !important;
-        height: auto !important;
-
-        max-width: 100% !important;
         max-height: none !important;
 
         object-fit: contain !important;
         object-position: center bottom !important;
 
         margin: 0 auto !important;
+        padding: 0 !important;
 
         transform: none !important;
-        filter: none !important;
-    }
-}
-/* =====================================================
-   TABLET AND MOBILE â€” FULL PORTRAIT
-   ===================================================== */
-
-@media screen and (max-width: 768px) {
-
-    .hero {
-        position: relative !important;
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important;
-        justify-items: stretch !important;
-        gap: 35px !important;
-        min-height: auto !important;
-        padding: 65px 7% 0 !important;
-        overflow: hidden !important;
-    }
-
-    .hero-copy {
-        position: relative !important;
-        z-index: 2 !important;
-        width: 100% !important;
-        max-width: 100% !important;
-        margin: 0 auto !important;
-        text-align: center !important;
-    }
-
-    .hero-copy .hero-title,
-    .hero-copy .lead,
-    .hero-copy .lead p {
-        text-align: center !important;
-    }
-
-    .hero-copy .lead p {
-        margin-bottom: 22px !important;
-    }
-
-    .hero-actions {
-        justify-content: center !important;
-    }
-
-    .hero-portrait {
-        position: relative !important;
-        right: auto !important;
-        bottom: auto !important;
-        z-index: 1 !important;
-        display: flex !important;
-        justify-content: center !important;
-        align-items: flex-end !important;
-        width: 100% !important;
-        max-width: 480px !important;
-        height: auto !important;
-        min-height: 0 !important;
-        margin: 0 auto !important;
-        padding: 0 !important;
-        overflow: visible !important;
-        background: transparent !important;
-        border: 0 !important;
-        border-radius: 0 !important;
-        box-shadow: none !important;
-    }
-
-    .hero-portrait img {
-        display: block !important;
-        width: auto !important;
-        height: auto !important;
-        max-width: 100% !important;
-        max-height: none !important;
-        object-fit: contain !important;
-        object-position: center bottom !important;
-        margin: 0 auto !important;
-        padding: 0 !important;
-        border: 0 !important;
-        border-radius: 0 !important;
-        box-shadow: none !important;
-        background: transparent !important;
-        transform: none !important;
-    }
-}
-
-
-/* =====================================================
-   HERO INTRO LABEL â€” SMALL TEXT ABOVE MAIN HEADLINE
-   Requires the intro words to be wrapped in:
-   <span class="hero-intro">Welcome to my Portfolio:</span>
-   ===================================================== */
-
-.hero-copy .hero-title {
-    text-align: center !important;
-    width: 100% !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
-}
-
-.hero-copy .hero-title .hero-intro {
-    display: block !important;
-    width: 100% !important;
-    margin: 0 auto 18px !important;
-    color: var(--accent) !important;
-    font-family: var(--font) !important;
-    font-size: 15px !important;
-    font-weight: 600 !important;
-    font-style: normal !important;
-    letter-spacing: 2px !important;
-    line-height: 1.5 !important;
-    text-align: center !important;
-}
-
-.hero-copy .hero-title em {
-    display: inline !important;
-}
-
-@media screen and (max-width: 768px) {
-    .hero-copy .hero-title .hero-intro {
-        font-size: 13px !important;
-        letter-spacing: 1.5px !important;
-        margin-bottom: 14px !important;
+        filter: grayscale(100%) !important;
     }
 }
