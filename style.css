@@ -572,6 +572,7 @@ footer > a:last-child:hover {
     transition-duration: .01ms !important;
   }
 }
+
 /* TOOLS & SKILLS — Equal-sized cards */
 .skills .service-grid {
     display: grid;
@@ -609,6 +610,7 @@ footer > a:last-child:hover {
         min-height: 0;
     }
 }
+
 /* MOBILE FOOTER ALIGNMENT */
 @media (max-width: 650px) {
   footer {
@@ -785,13 +787,39 @@ footer > a:last-child:hover {
     }
 
 }
-/* HERO HEADING ALIGNMENT */
 
-.hero-copy .hero-title {
-    text-align: left !important;
-}
+/* =====================================================
+   HERO SECTION — CENTERED INTRO + OVERSIZED PORTRAIT
+   Desktop: text on left, portrait integrated on right
+   Mobile: text first, portrait below
+   ===================================================== */
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 769px) {
+    .hero {
+        position: relative !important;
+        display: grid !important;
+        grid-template-columns: minmax(0, 58%) minmax(0, 42%) !important;
+        align-items: center !important;
+        justify-items: stretch !important;
+        gap: 0 !important;
+        min-height: 900px !important;
+        padding: 90px 8% 0 !important;
+        overflow: hidden !important;
+        isolation: isolate !important;
+    }
+
+    .hero-copy {
+        grid-column: 1 !important;
+        grid-row: 1 !important;
+        position: relative !important;
+        z-index: 2 !important;
+        width: 100% !important;
+        min-width: 0 !important;
+        max-width: 760px !important;
+        margin: 0 auto !important;
+        align-self: center !important;
+        text-align: center !important;
+    }
 
     .hero-copy .hero-title {
         display: block !important;
@@ -799,12 +827,169 @@ footer > a:last-child:hover {
         text-align: center !important;
         margin-left: auto !important;
         margin-right: auto !important;
-        line-height: 1.2 !important;
     }
 
     .hero-copy .hero-title em {
         display: inline !important;
+    }
+
+    .hero-copy .lead {
+        width: 100% !important;
+        max-width: 700px !important;
+        margin: 0 auto !important;
         text-align: center !important;
     }
 
+    .hero-copy .lead p {
+        margin: 0 auto 24px !important;
+        text-align: center !important;
+        line-height: 1.9 !important;
+    }
+
+    .hero-copy .lead p:last-child {
+        margin-bottom: 0 !important;
+    }
+
+    .hero-actions {
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        flex-wrap: wrap !important;
+    }
+
+    .hero-note {
+        text-align: center !important;
+    }
+
+    /* The portrait is positioned independently so it can grow
+       beyond its grid column and visually join the hero background. */
+    .hero-portrait {
+        position: absolute !important;
+        right: -4% !important;
+        bottom: 0 !important;
+        z-index: 1 !important;
+        grid-column: auto !important;
+        grid-row: auto !important;
+        display: flex !important;
+        justify-content: flex-end !important;
+        align-items: flex-end !important;
+        width: 55% !important;
+        height: 100% !important;
+        min-height: 0 !important;
+        max-width: none !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        overflow: visible !important;
+        background: transparent !important;
+        border: 0 !important;
+        border-radius: 0 !important;
+        box-shadow: none !important;
+        pointer-events: none !important;
+    }
+
+    .hero-portrait img {
+        display: block !important;
+        width: auto !important;
+        height: 112% !important;
+        max-width: none !important;
+        max-height: none !important;
+        object-fit: contain !important;
+        object-position: right bottom !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        border: 0 !important;
+        border-radius: 0 !important;
+        outline: 0 !important;
+        box-shadow: none !important;
+        background: transparent !important;
+        filter: none !important;
+        transform: scale(1.08) !important;
+        transform-origin: right bottom !important;
+    }
+
+    .hero-portrait::before,
+    .hero-portrait::after {
+        display: none !important;
+        content: none !important;
+    }
+}
+
+/* TABLET AND MOBILE — preserve readable text and stack portrait */
+@media screen and (max-width: 768px) {
+    .hero {
+        position: relative !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-items: stretch !important;
+        gap: 35px !important;
+        min-height: auto !important;
+        padding: 65px 7% 0 !important;
+        overflow: hidden !important;
+    }
+
+    .hero-copy {
+        position: relative !important;
+        z-index: 2 !important;
+        grid-column: auto !important;
+        grid-row: auto !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 auto !important;
+        text-align: center !important;
+    }
+
+    .hero-copy .hero-title,
+    .hero-copy .lead,
+    .hero-copy .lead p {
+        text-align: center !important;
+    }
+
+    .hero-copy .lead p {
+        margin-bottom: 22px !important;
+    }
+
+    .hero-actions {
+        justify-content: center !important;
+    }
+
+    .hero-portrait {
+        position: relative !important;
+        right: auto !important;
+        bottom: auto !important;
+        z-index: 1 !important;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: flex-end !important;
+        grid-column: auto !important;
+        grid-row: auto !important;
+        width: 100% !important;
+        max-width: 480px !important;
+        height: auto !important;
+        min-height: 0 !important;
+        margin: 0 auto !important;
+        padding: 0 !important;
+        overflow: hidden !important;
+        background: transparent !important;
+        border: 0 !important;
+        border-radius: 0 !important;
+        box-shadow: none !important;
+    }
+
+    .hero-portrait img {
+        display: block !important;
+        width: 100% !important;
+        height: auto !important;
+        max-width: 100% !important;
+        max-height: none !important;
+        object-fit: contain !important;
+        object-position: center bottom !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        border: 0 !important;
+        border-radius: 0 !important;
+        box-shadow: none !important;
+        background: transparent !important;
+        transform: none !important;
+    }
 }
