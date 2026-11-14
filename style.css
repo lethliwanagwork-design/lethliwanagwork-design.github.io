@@ -911,23 +911,23 @@ footer > a:last-child:hover {
     }
 }
 
-
 /* ==========================================
-   MOBILE PORTRAIT — SIGNIFICANTLY LARGER
-   Preserve full portrait; do not crop the head
+   MOBILE PORTRAIT — FORCE LARGER IMAGE
+   Prevent flexbox from shrinking the image
    ========================================== */
 
 @media screen and (max-width: 768px) {
 
     .hero-portrait {
         display: flex !important;
+        flex-direction: row !important;
         justify-content: center !important;
         align-items: flex-end !important;
 
         position: relative !important;
         width: 100vw !important;
         max-width: none !important;
-        min-width: 0 !important;
+        min-width: 100vw !important;
         height: auto !important;
 
         margin-left: calc(50% - 50vw) !important;
@@ -935,24 +935,25 @@ footer > a:last-child:hover {
 
         padding: 0 !important;
         overflow: visible !important;
-        background: transparent !important;
     }
 
     .hero-portrait img {
         display: block !important;
 
+        flex: 0 0 125vw !important;
         width: 125vw !important;
+        min-width: 125vw !important;
         max-width: none !important;
+
         height: auto !important;
         max-height: none !important;
 
         object-fit: contain !important;
         object-position: center bottom !important;
 
-        margin: 0 auto !important;
+        margin: 0 !important;
         padding: 0 !important;
 
         transform: none !important;
-        filter: grayscale(100%) !important;
     }
 }
