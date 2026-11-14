@@ -572,8 +572,7 @@ footer > a:last-child:hover {
     transition-duration: .01ms !important;
   }
 }
-
-/* TOOLS & SKILLS — Equal-sized cards */
+/* TOOLS & SKILLS â€” Equal-sized cards */
 .skills .service-grid {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -610,7 +609,6 @@ footer > a:last-child:hover {
         min-height: 0;
     }
 }
-
 /* MOBILE FOOTER ALIGNMENT */
 @media (max-width: 650px) {
   footer {
@@ -787,9 +785,8 @@ footer > a:last-child:hover {
     }
 
 }
-
 /* =====================================================
-   HERO SECTION — CENTERED INTRO + OVERSIZED PORTRAIT
+   HERO SECTION â€” CENTERED INTRO + OVERSIZED PORTRAIT
    Desktop: text on left, portrait integrated on right
    Mobile: text first, portrait below
    ===================================================== */
@@ -914,7 +911,7 @@ footer > a:last-child:hover {
     }
 }
 
-/* TABLET AND MOBILE — preserve readable text and stack portrait */
+/* TABLET AND MOBILE â€” preserve readable text and stack portrait */
 @media screen and (max-width: 768px) {
     .hero {
         position: relative !important;
