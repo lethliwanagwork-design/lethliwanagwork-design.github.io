@@ -572,7 +572,7 @@ footer > a:last-child:hover {
     transition-duration: .01ms !important;
   }
 }
-/* TOOLS & SKILLS — Equal-sized cards */
+/* TOOLS & SKILLS â€” Equal-sized cards */
 .skills .service-grid {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -785,26 +785,115 @@ footer > a:last-child:hover {
     }
 
 }
-/* HERO HEADING ALIGNMENT */
+/* ==========================================
+   HERO SECTION â€” CENTERED TEXT + RIGHT PORTRAIT
+   Desktop: text left / portrait right
+   Mobile: text first / portrait below
+   ========================================== */
 
-.hero-copy .hero-title {
-    text-align: left !important;
+.hero {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr) !important;
+    align-items: center !important;
+    justify-items: stretch !important;
+    gap: 75px !important;
 }
 
-@media screen and (max-width: 768px) {
+.hero-copy {
+    grid-column: 1 !important;
+    grid-row: 1 !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    margin: 0 auto !important;
+    text-align: center !important;
+}
 
-    .hero-copy .hero-title {
-        display: block !important;
+.hero-copy .hero-title {
+    display: block !important;
+    width: 100% !important;
+    text-align: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+.hero-copy .hero-title em {
+    display: inline !important;
+}
+
+.hero-copy .lead {
+    width: 100% !important;
+    max-width: 650px !important;
+    margin: 0 auto !important;
+    text-align: center !important;
+}
+
+.hero-copy .lead p {
+    margin: 0 auto 24px !important;
+    text-align: center !important;
+    line-height: 1.9 !important;
+}
+
+.hero-copy .lead p:last-child {
+    margin-bottom: 0 !important;
+}
+
+.hero-actions {
+    justify-content: center !important;
+}
+
+.hero-note {
+    text-align: center !important;
+}
+
+.hero-portrait {
+    grid-column: 2 !important;
+    grid-row: 1 !important;
+    width: 100% !important;
+    max-width: 480px !important;
+    justify-self: end !important;
+    align-self: center !important;
+    margin: 0 !important;
+}
+
+.hero-portrait img {
+    display: block;
+    width: 100% !important;
+    height: 510px;
+    object-fit: cover;
+    object-position: center top;
+}
+
+/* TABLET AND MOBILE â€” stack portrait below the text */
+@media screen and (max-width: 768px) {
+    .hero {
+        grid-template-columns: minmax(0, 1fr) !important;
+        gap: 45px !important;
+        padding: 65px 7% !important;
+    }
+
+    .hero-copy {
+        grid-column: 1 !important;
+        grid-row: 1 !important;
         width: 100% !important;
         text-align: center !important;
-        margin-left: auto !important;
-        margin-right: auto !important;
-        line-height: 1.2 !important;
     }
 
-    .hero-copy .hero-title em {
-        display: inline !important;
+    .hero-copy .hero-title,
+    .hero-copy .lead,
+    .hero-copy .lead p {
         text-align: center !important;
     }
 
+    .hero-portrait {
+        grid-column: 1 !important;
+        grid-row: 2 !important;
+        justify-self: center !important;
+        width: 100% !important;
+        max-width: 340px !important;
+    }
+
+    .hero-portrait img {
+        height: 420px !important;
+    }
 }
